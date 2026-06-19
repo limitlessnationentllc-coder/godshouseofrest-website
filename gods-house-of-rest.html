@@ -551,8 +551,11 @@
     position: relative;
     z-index: 4;
     align-self: center;
-    padding: 140px 5vw 80px clamp(24px, 7vw, 96px);
+    padding: 120px 5vw 60px clamp(24px, 7vw, 96px);
     max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
   .hero-label {
@@ -577,7 +580,7 @@
 
   .hero-headline {
     position: relative;
-    font-size: clamp(44px, 7vw, 96px);
+    font-size: clamp(38px, 5.5vw, 72px);
     font-weight: 900;
     color: var(--text);
     line-height: 1.0;
@@ -628,10 +631,14 @@
   .hero-headline .dot { color: var(--amber); }
 
   .hero-verse {
-    font-size: clamp(13px, 1.5vw, 16px);
-    color: var(--text-muted);
+    font-size: clamp(13px, 1.3vw, 15px);
+    color: rgba(245,240,232,0.72);
     font-style: italic;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
+    padding: 14px 18px;
+    border-left: 3px solid var(--gold);
+    background: rgba(212,175,55,0.06);
+    border-radius: 0 6px 6px 0;
     max-width: 480px;
     opacity: 0;
     animation: fadeUp 0.8s 0.7s forwards;
@@ -2116,14 +2123,14 @@
   <!-- LEFT — words -->
   <div class="hero-content">
     <p class="hero-label">God's House of Rest · Chula Vista, CA</p>
+    <p class="hero-verse">
+      <strong>Matthew 11:28</strong> — "Come to Me, all you who labor and are heavy laden, and I will give you rest."
+    </p>
     <h1 class="hero-headline">
       Find <span class="gold">Rest.</span><br>
       Find <span class="gold">Healing.</span><br>
       Find <span class="gold">Family.</span>
     </h1>
-    <p class="hero-verse">
-      <strong>Matthew 11:28</strong> — "Come to Me, all you who labor and are heavy laden, and I will give you rest."
-    </p>
     <div class="hero-actions">
       <a href="#visit" class="btn-primary">
         Plan Your First Visit
