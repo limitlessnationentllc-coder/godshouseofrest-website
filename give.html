@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Give Online | God's House of Rest Church | Chula Vista, CA</title>
+<meta name="description" content="Support God's House of Rest Church with a secure online gift. Tax-deductible giving options for tithe, offerings, youth, missions, and community outreach in Chula Vista, CA.">
+<meta property="og:title" content="Give to God's House of Rest | Chula Vista, CA">
+<meta property="og:description" content="Your generosity fuels discipleship, outreach, and healing ministry in Chula Vista. Give online — safe, secure, and tax-deductible.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://godshouseofrest.org/godshouseofrest/pastor-robertson-preaching.jpg">
+<meta property="og:url" content="https://godshouseofrest.org/give.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://godshouseofrest.org/godshouseofrest/pastor-robertson-preaching.jpg">
+<link rel="canonical" href="https://godshouseofrest.org/give.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,700&family=Epilogue:wght@300;400;500;600;700&display=swap&font-display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","Church"],"name":"God's House of Rest Church","url":"https://godshouseofrest.org","address":{"@type":"PostalAddress","streetAddress":"618 E Street Suite H","addressLocality":"Chula Vista","addressRegion":"CA","postalCode":"91910"},"telephone":"(619) 931-9344"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://godshouseofrest.org/"},{"@type":"ListItem","position":2,"name":"Give","item":"https://godshouseofrest.org/give.html"}]}]}
+</script>
+<style>
+  .give-wrap { max-width: 780px; margin: 0 auto; }
+  .give-toggle { display:inline-flex; background:rgba(255,255,255,0.06); border-radius:8px; padding:4px; margin-bottom:40px; gap:4px; }
+  .give-toggle-btn { padding:10px 28px; border-radius:6px; font-size:13px; font-weight:600; letter-spacing:0.05em; cursor:pointer; border:none; transition:background 0.2s,color 0.2s; color:var(--text-muted); background:transparent; }
+  .give-toggle-btn.active { background:var(--amber); color:var(--navy); }
+  .give-amounts { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:24px; }
+  .amount-btn { padding:16px 12px; border-radius:6px; border:1px solid rgba(200,134,10,0.3); background:transparent; color:var(--text); font-size:20px; font-weight:700; cursor:pointer; transition:all 0.18s; width:100%; }
+  .amount-btn:hover, .amount-btn.active { background:var(--amber); color:var(--navy); border-color:var(--amber); }
+  .amount-btn:active { transform:scale(0.96); }
+  .give-custom { max-width:100%; margin:0 auto 24px; position:relative; }
+  .give-custom-prefix { position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--amber); font-size:18px; font-weight:700; }
+  .give-custom input { width:100%; background:rgba(10,22,40,0.8); border:1px solid rgba(200,134,10,0.2); border-radius:6px; padding:14px 16px 14px 32px; color:var(--text); font-size:18px; font-weight:700; outline:none; transition:border-color 0.2s; }
+  .give-custom input:focus { border-color:var(--amber); }
+  .fund-select { width:100%; background:rgba(10,22,40,0.8); border:1px solid rgba(200,134,10,0.2); border-radius:6px; padding:14px 16px; color:var(--text); font-size:15px; outline:none; cursor:pointer; appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23C8860A' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; padding-right:40px; margin-bottom:24px; }
+  .impact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; }
+  .impact-card { background:rgba(255,255,255,0.04); border-radius:10px; padding:28px; text-align:left; border:1px solid rgba(200,134,10,0.08); }
+  .impact-num { font-family:'Fraunces',serif; font-size:40px; font-weight:900; color:var(--gold); line-height:1; margin-bottom:8px; }
+  .impact-desc { font-size:13px; color:var(--text-muted); line-height:1.6; }
+  .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+  .why-card { padding:32px; background:var(--navy-mid); border-radius:10px; border:1px solid rgba(200,134,10,0.1); }
+  .why-icon { width:48px; height:48px; border-radius:12px; background:rgba(200,134,10,0.12); display:flex; align-items:center; justify-content:center; color:var(--amber); margin-bottom:16px; }
+  .why-title { font-family:'Fraunces',serif; font-size:18px; font-weight:700; color:var(--text); margin-bottom:8px; }
+  .why-body { font-size:14px; color:var(--text-muted); line-height:1.65; }
+  @media (max-width:768px) {
+    .give-amounts { grid-template-columns:1fr 1fr; }
+    .impact-grid { grid-template-columns:1fr; }
+    .why-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="cursor-flame" id="cursorFlame" aria-hidden="true"></div>
+<div class="cursor-core"  id="cursorCore"  aria-hidden="true"></div>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="gods-house-of-rest.html" class="nav-logo">
+    <img src="godshouseofrest/church-logo.png" alt="God's House of Rest Church" class="nav-logo-img">
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">God's House of Rest</span>
+      <span class="nav-logo-tagline">CHULA VISTA · MATTHEW 11:28</span>
+    </span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="about.html">About</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="sermons.html">Sermons</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contact.html#prayer">Prayer</a></li>
+    <li><a href="give.html" style="color:var(--text)">Give</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="gods-house-of-rest.html#visit" class="nav-cta">Plan Your Visit</a></li>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&times;</button>
+  <a href="gods-house-of-rest.html" class="mobile-link">Home</a>
+  <a href="about.html" class="mobile-link">About</a>
+  <a href="sermons.html" class="mobile-link">Sermons</a>
+  <a href="events.html" class="mobile-link">Events</a>
+  <a href="give.html" class="mobile-link">Give</a>
+  <a href="blog.html" class="mobile-link">Blog</a>
+  <a href="gods-house-of-rest.html#visit" class="mobile-link" style="color:var(--amber)">Plan Your Visit →</a>
+</div>
+<a href="gods-house-of-rest.html#visit" class="floating-cta" id="floatingCta">Plan My Visit</a>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb"><a href="gods-house-of-rest.html">Home</a><span>›</span><span>Give</span></nav>
+    <p class="page-hero-label">Generosity</p>
+    <h1>Your Gift Changes Lives in Chula Vista</h1>
+    <p class="page-hero-sub">Every gift — large or small — fuels real ministry. Meals for families. Resources for youth. The message of rest reaching more people. This is what your generosity makes possible.</p>
+  </div>
+</div>
+<div class="gold-divider"></div>
+
+<section class="section">
+  <div class="give-wrap reveal">
+    <div style="text-align:center; margin-bottom:48px">
+      <div class="section-label" style="justify-content:center">Give Online</div>
+      <h2 class="section-title" style="text-align:center">Choose Your Giving</h2>
+    </div>
+
+    <div style="text-align:center">
+      <div class="give-toggle" role="group" aria-label="Giving frequency">
+        <button class="give-toggle-btn" onclick="setFreq(this)" aria-pressed="false">One-Time</button>
+        <button class="give-toggle-btn active" onclick="setFreq(this)" aria-pressed="true">Monthly</button>
+        <button class="give-toggle-btn" onclick="setFreq(this)" aria-pressed="false">Quarterly</button>
+      </div>
+    </div>
+
+    <div class="give-amounts" role="group" aria-label="Select giving amount">
+      <button class="amount-btn" onclick="setAmount(this,25)" aria-pressed="false">$25</button>
+      <button class="amount-btn active" onclick="setAmount(this,50)" aria-pressed="true">$50</button>
+      <button class="amount-btn" onclick="setAmount(this,100)" aria-pressed="false">$100</button>
+      <button class="amount-btn" onclick="setAmount(this,250)" aria-pressed="false">$250</button>
+    </div>
+
+    <div class="give-custom">
+      <span class="give-custom-prefix" aria-hidden="true">$</span>
+      <input type="number" id="customAmount" placeholder="Custom amount" aria-label="Custom giving amount" min="1">
+    </div>
+
+    <label class="form-label" for="giveSelect" style="margin-bottom:8px; display:block">Giving Fund</label>
+    <select class="fund-select" id="giveSelect" aria-label="Select fund to give to">
+      <option value="general">General Fund</option>
+      <option value="building">Building Fund</option>
+      <option value="youth">Youth Fund</option>
+      <option value="missions">Missions</option>
+      <option value="outreach">Community Outreach</option>
+    </select>
+
+    <div style="text-align:center">
+      <button class="btn-primary" style="font-size:15px; padding:18px 48px; margin:0 auto" aria-label="Give now securely">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Give Now — Safe &amp; Secure
+      </button>
+      <p style="font-size:12px; color:var(--text-muted); margin-top:14px">256-bit SSL encrypted · Tax-deductible · Cancel anytime</p>
+    </div>
+
+    <div class="impact-grid">
+      <div class="impact-card reveal reveal-delay-1">
+        <div class="impact-num">$50</div>
+        <div class="impact-desc">feeds 10 families through our community outreach program</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-2">
+        <div class="impact-num">$100</div>
+        <div class="impact-desc">provides youth resources for a full month of ministry</div>
+      </div>
+      <div class="impact-card reveal reveal-delay-3">
+        <div class="impact-num">$250</div>
+        <div class="impact-desc">supports one full month of community outreach in Chula Vista</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<div class="dark-band">
+  <div class="dark-band-inner">
+    <div class="section-label reveal">Why Give</div>
+    <h2 class="section-title reveal reveal-delay-1">Where Your Gift Goes</h2>
+    <p class="section-sub reveal reveal-delay-2">Every dollar given to God's House of Rest is a dollar invested in people — not programs.</p>
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div>
+        <div class="why-title">Community Outreach</div>
+        <div class="why-body">Feeding families, supporting neighbors, and being the hands and feet of Jesus throughout Chula Vista and South Bay San Diego.</div>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a4 4 0 100 8 4 4 0 000-8zM6 20v-2a6 6 0 0112 0v2"/></svg></div>
+        <div class="why-title">Youth & Children</div>
+        <div class="why-body">Investing in the next generation — curriculum, events, Teen Vibe Ministry, VBS, and safe environments where kids encounter God.</div>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/></svg></div>
+        <div class="why-title">Ministry & Discipleship</div>
+        <div class="why-body">Sunday worship, Bible Study, prayer ministry, and the infrastructure that keeps the church doors open and the mission moving forward.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="godshouseofrest/church-logo.png" alt="God's House of Rest Church" class="footer-logo-img">
+      <p class="footer-tagline">Find Rest · Find Family · Find Purpose</p>
+      <p class="footer-verse">"Come to Me… and I will give you rest." — Matthew 11:28</p>
+      <div class="footer-contact-item">618 E Street Suite H, Chula Vista, CA 91910</div>
+      <div class="footer-contact-item"><a href="tel:6199319344">(619) 931-9344</a></div>
+    </div>
+    <div><div class="footer-col-title">Quick Links</div><nav class="footer-links"><a href="gods-house-of-rest.html">Home</a><a href="about.html">About</a><a href="sermons.html">Sermons</a><a href="programs.html">Programs</a><a href="events.html">Events</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></nav></div>
+    <div><div class="footer-col-title">Giving</div><nav class="footer-links"><a href="give.html">Give Online</a><a href="give.html#why">Why Give</a><a href="contact.html">Questions?</a></nav></div>
+    <div><div class="footer-col-title">Service Times</div><div style="font-size:13px;color:var(--text-muted);line-height:2"><strong style="color:var(--amber);font-size:11px;letter-spacing:0.1em;text-transform:uppercase">Sunday</strong><br>Worship · 10:00 AM<br><br><strong style="color:var(--amber);font-size:11px;letter-spacing:0.1em;text-transform:uppercase">Wednesday</strong><br>Bible Study · 7:00 PM</div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 God's House of Rest Church · Chula Vista, CA 91910</span></div>
+</footer>
+
+<script>
+  const navbar=document.getElementById('navbar'),fCta=document.getElementById('floatingCta');
+  window.addEventListener('scroll',()=>{const s=window.scrollY>60;navbar.classList.toggle('scrolled',s);fCta.classList.toggle('visible',s);},{passive:true});
+  const hbg=document.getElementById('hamburgerBtn'),mm=document.getElementById('mobileMenu'),mc=document.getElementById('mobileClose');
+  hbg.addEventListener('click',()=>{mm.classList.add('open');hbg.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';});
+  mc.addEventListener('click',()=>{mm.classList.remove('open');hbg.setAttribute('aria-expanded','false');document.body.style.overflow='';});
+  document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>{mm.classList.remove('open');document.body.style.overflow='';}));
+  function setAmount(btn,v){document.querySelectorAll('.amount-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});btn.classList.add('active');btn.setAttribute('aria-pressed','true');document.getElementById('customAmount').value='';}
+  function setFreq(btn){document.querySelectorAll('.give-toggle-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});btn.classList.add('active');btn.setAttribute('aria-pressed','true');}
+  document.getElementById('customAmount').addEventListener('input',function(){if(this.value)document.querySelectorAll('.amount-btn').forEach(b=>{b.classList.remove('active');b.setAttribute('aria-pressed','false');});});
+  const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+  const lo=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('line-in');lo.unobserve(e.target);}}),{threshold:0.5});
+  document.querySelectorAll('.section-label').forEach(el=>lo.observe(el));
+  (function(){
+    const isTouch=window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+    if(isTouch)return;
+    const flame=document.getElementById('cursorFlame'),core=document.getElementById('cursorCore');
+    let mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my,cx=mx,cy=my;
+    window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;},{passive:true});
+    window.addEventListener('mouseenter',()=>{flame.classList.add('lit');core.classList.add('lit');});
+    window.addEventListener('mouseleave',()=>{flame.classList.remove('lit');core.classList.remove('lit');});
+    (function tick(){fx+=(mx-fx)*0.052;fy+=(my-fy)*0.052;cx+=(mx-cx)*0.110;cy+=(my-cy)*0.110;flame.style.transform=`translate(${fx}px,${fy}px)`;core.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(tick);})();
+  })();
+</script>
+<script src="site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | God's House of Rest Church | Chula Vista, CA</title>
+<meta name="description" content="Learn the story behind God's House of Rest — a church in Chula Vista, CA built on healing, discipleship, and radical welcome. Meet our pastor and discover our mission.">
+<meta property="og:title" content="About God's House of Rest | Chula Vista Church">
+<meta property="og:description" content="We are more than a church. We are a place of rest, healing, and purpose for every person who walks through our doors.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://godshouseofrest.org/godshouseofrest/pastor-robertson-preaching.jpg">
+<meta property="og:url" content="https://godshouseofrest.org/about.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://godshouseofrest.org/godshouseofrest/pastor-robertson-preaching.jpg">
+<link rel="canonical" href="https://godshouseofrest.org/about.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,700&family=Epilogue:wght@300;400;500;600;700&display=swap&font-display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness","Church"],
+      "name": "God's House of Rest Church",
+      "url": "https://godshouseofrest.org",
+      "address": {"@type":"PostalAddress","streetAddress":"618 E Street Suite H","addressLocality":"Chula Vista","addressRegion":"CA","postalCode":"91910"},
+      "telephone": "(619) 931-9344",
+      "openingHours": "Su 10:00-12:00"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://godshouseofrest.org/"},
+        {"@type":"ListItem","position":2,"name":"About","item":"https://godshouseofrest.org/about.html"}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+  .value-card {
+    background: var(--navy-mid);
+    border: 1px solid rgba(200,134,10,0.12);
+    border-radius: 10px;
+    padding: 32px;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .value-card:hover { border-color: rgba(200,134,10,0.4); transform: translateY(-4px); }
+  .value-num {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(200,134,10,0.18);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .value-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+  .value-body { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .story-img {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(200,134,10,0.15);
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+    background-image: url('godshouseofrest/487567550_1204958107966409_8128790692115245161_n.jpg');
+    background-size: cover;
+    background-position: center top;
+  }
+  .story-body { font-size: clamp(15px,1.6vw,18px); color: var(--text-muted); line-height: 1.85; }
+  .story-body p + p { margin-top: 20px; }
+  .story-body strong { color: var(--gold); font-weight: 600; }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+  .team-card {
+    background: var(--navy-mid);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(200,134,10,0.1);
+    text-align: center;
+    padding-bottom: 28px;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .team-card:hover { border-color: rgba(200,134,10,0.35); transform: translateY(-4px); }
+  .team-photo {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
+    background-image: url('godshouseofrest/491441119_668022222599867_4260518855329091498_n.jpg');
+    background-size: cover;
+    background-position: center top;
+    margin-bottom: 20px;
+  }
+  .team-name { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .team-role { font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+  .team-bio { font-size: 13px; color: var(--text-muted); line-height: 1.6; padding: 0 24px; }
+
+  .steps-list { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
+  .step-item {
+    display: flex; align-items: flex-start; gap: 20px;
+    background: var(--navy-mid); border-radius: 10px;
+    border: 1px solid rgba(200,134,10,0.1);
+    padding: 24px;
+    transition: border-color 0.25s;
+  }
+  .step-item:hover { border-color: rgba(200,134,10,0.35); }
+  .step-num {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(200,134,10,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-size: 18px; font-weight: 900; color: var(--amber);
+  }
+  .step-title { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+  .step-body { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  @media (max-width: 768px) {
+    .values-grid { grid-template-columns: 1fr; }
+    .story-grid { grid-template-columns: 1fr; gap: 36px; }
+    .team-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-flame" id="cursorFlame" aria-hidden="true"></div>
+<div class="cursor-core"  id="cursorCore"  aria-hidden="true"></div>
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <a href="gods-house-of-rest.html" class="nav-logo" aria-label="God's House of Rest Church - Home">
+    <img src="godshouseofrest/church-logo.png" alt="God's House of Rest Church" class="nav-logo-img">
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">God's House of Rest</span>
+      <span class="nav-logo-tagline">CHULA VISTA · MATTHEW 11:28</span>
+    </span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="about.html" style="color:var(--text)">About</a></li>
+    <li><a href="programs.html">Programs</a></li>
+    <li><a href="sermons.html">Sermons</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contact.html#prayer">Prayer</a></li>
+    <li><a href="give.html">Give</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="gods-house-of-rest.html#visit" class="nav-cta">Plan Your Visit</a></li>
+  </ul>
+  <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <a href="gods-house-of-rest.html" class="mobile-link">Home</a>
+  <a href="about.html" class="mobile-link">About</a>
+  <a href="programs.html" class="mobile-link">Programs</a>
+  <a href="sermons.html" class="mobile-link">Sermons</a>
+  <a href="events.html" class="mobile-link">Events</a>
+  <a href="give.html" class="mobile-link">Give</a>
+  <a href="blog.html" class="mobile-link">Blog</a>
+  <a href="gods-house-of-rest.html#visit" class="mobile-link" style="color:var(--amber)">Plan Your Visit →</a>
+</div>
+
+<a href="gods-house-of-rest.html#visit" class="floating-cta" id="floatingCta">Plan My Visit</a>
+
+<!-- ─── PAGE HERO ─── -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="gods-house-of-rest.html">Home</a>
+      <span>›</span>
+      <span>About</span>
+    </nav>
+    <p class="page-hero-label">Our Story</p>
+    <h1>Built on Rest.<br>Fueled by Purpose.</h1>
+    <p class="page-hero-sub">We are not a perfect church — we are a church full of people who found something real. Rest. Healing. Family. And we want you to find it too.</p>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- ─── OUR STORY ─── -->
+<section class="section" aria-labelledby="story-heading">
+  <div class="story-grid">
+    <div class="story-img reveal" role="img" aria-label="Pastor preaching at God's House of Rest"></div>
+    <div class="reveal reveal-delay-2">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title" id="story-heading">More Than a Sunday Service</h2>
+      <div class="story-body">
+        <p>God's House of Rest Church was born from a simple conviction held by <strong>Pastor R. Tyrone Robertson and First Lady Deborah Robertson</strong>: every person carries something — a wound, a question, a burden they were never meant to carry alone. And Jesus meant every word when He said, "Come to Me… and I will give you rest."</p>
+        <p>Together, the Robertsons planted this church in Chula Vista, California because this community deserves a church that shows up. Not a church that performs on Sundays and disappears on Monday — but a living, breathing family that walks alongside people through the real stuff of life.</p>
+        <p>We are <strong>disciples, not attenders</strong>. We are <strong>family, not spectators</strong>. We believe transformation is possible, healing is real, and no one is too far gone to find rest in God.</p>
+      </div>
+      <div style="margin-top:32px">
+        <a href="gods-house-of-rest.html#visit" class="btn-primary">Plan Your First Visit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── MISSION & VALUES ─── -->
+<div class="dark-band">
+  <div class="dark-band-inner">
+    <div class="section-label reveal">What We Believe</div>
+    <h2 class="section-title reveal reveal-delay-1">Our Mission in Four Words</h2>
+    <p class="section-sub reveal reveal-delay-2">Everything we do comes back to four core convictions about what church is supposed to be.</p>
+
+    <div class="values-grid">
+      <div class="value-card reveal reveal-delay-1">
+        <div class="value-num">01</div>
+        <div class="value-title">Rest</div>
+        <div class="value-body">In a world that never stops, we offer something countercultural: stillness, peace, and the presence of God. "Come to Me… and I will give you rest." — Matthew 11:28</div>
+      </div>
+      <div class="value-card reveal reveal-delay-2">
+        <div class="value-num">02</div>
+        <div class="value-title">Healing</div>
+        <div class="value-body">We believe the church should be the most healing place on earth. We make room for broken people because we are broken people — and God specializes in restoration.</div>
+      </div>
+      <div class="value-card reveal reveal-delay-3">
+        <div class="value-num">03</div>
+        <div class="value-title">Discipleship</div>
+        <div class="value-body">We don't create attenders — we create disciples. Faith is not a spectator sport, and we commit to walking alongside every person on their journey with God.</div>
+      </div>
+      <div class="value-card reveal reveal-delay-4">
+        <div class="value-num">04</div>
+        <div class="value-title">Community</div>
+        <div class="value-body">We are family. The kind that shows up, sits together, prays together, and celebrates together. Church is not a building — it's the people inside it.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="gold-divider"></div>
+
+<!-- ─── LEADERSHIP ─── -->
+<section id="team" class="section" aria-labelledby="team-heading">
+  <div class="section-label reveal">Our People</div>
+  <h2 class="section-title reveal reveal-delay-1" id="team-heading">The Team</h2>
+  <p class="section-sub reveal reveal-delay-2" style="margin-bottom:0">Called, committed, and community-first — our leadership team is here to serve, not be served.</p>
+
+  <div class="team-grid">
+    <div class="team-card reveal reveal-delay-1">
+      <div class="team-photo" style="background-image:url('godshouseofrest/pastor-robertson-headshot.jpg'); background-position:center top;"></div>
+      <div class="team-name">Pastor R. Tyrone Robertson</div>
+      <div class="team-role">Senior Pastor &amp; Founder</div>
+      <div class="team-bio">Pastor Robertson planted God's House of Rest with a heart for the broken, the overlooked, and the weary. His preaching is rooted in Scripture, deeply personal, and consistently calls people into the rest God promises.</div>
+    </div>
+    <div class="team-card reveal reveal-delay-2">
+      <div class="team-photo" style="background-image:url('godshouseofrest/first-lady-deborah-robertson.jpg'); background-position:center top;"></div>
+      <div class="team-name">First Lady Deborah Robertson</div>
+      <div class="team-role">Co-Pastor &amp; First Lady</div>
+      <div class="team-bio">First Lady Deborah is the heart behind much of the pastoral care at God's House of Rest. Her warmth, wisdom, and unwavering faith have shaped the culture of this church since its founding.</div>
+    </div>
+    <div class="team-card reveal reveal-delay-3">
+      <div class="team-photo" style="background-image:url('godshouseofrest/503041386_1059849579389123_8177207497513065229_n.jpg'); background-position:center;"></div>
+      <div class="team-name">Our Church Family</div>
+      <div class="team-role">The Congregation</div>
+      <div class="team-bio">At God's House of Rest, the congregation is the ministry. Every person who walks through our doors is a valued member of this family — and a vital part of what God is building here.</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── NEXT STEPS ─── -->
+<section id="next-steps" class="section" aria-labelledby="steps-heading">
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;">
+    <div>
+      <div class="section-label reveal">New Here?</div>
+      <h2 class="section-title reveal reveal-delay-1" id="steps-heading">Your Next Steps</h2>
+      <p class="section-sub reveal reveal-delay-2">Whether you've been coming for years or just found us online — here's how to go deeper.</p>
+    </div>
+    <div class="steps-list">
+      <div class="step-item reveal reveal-delay-1">
+        <div class="step-num">1</div>
+        <div>
+          <div class="step-title">Visit on Sunday</div>
+          <div class="step-body">Join us at 618 E Street Suite H, Chula Vista at 10:00 AM. Come as you are — no dress code, no performance required.</div>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-2">
+        <div class="step-num">2</div>
+        <div>
+          <div class="step-title">Meet the Family</div>
+          <div class="step-body">Our welcome team will greet you at the door. Stay after service and let us get to know you — coffee's on us.</div>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-3">
+        <div class="step-num">3</div>
+        <div>
+          <div class="step-title">Find Your Ministry</div>
+          <div class="step-body">Explore our programs — Children's, Youth, Men's, Women's, Prayer Ministry, and more. There's a place for you here.</div>
+        </div>
+      </div>
+      <div class="step-item reveal reveal-delay-4">
+        <div class="step-num">4</div>
+        <div>
+          <div class="step-title">Get Rooted</div>
+          <div class="step-body">Join Wednesday Bible Study at 7 PM and begin the discipleship journey. Faith grows in community — not in isolation.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ─── CTA BAND ─── -->
+<div class="dark-band" style="text-align:center">
+  <div class="dark-band-inner" style="max-width:640px; margin:0 auto">
+    <p class="section-label reveal" style="justify-content:center">Ready?</p>
+    <h2 class="section-title reveal reveal-delay-1">We've Been Expecting You</h2>
+    <p class="section-sub reveal reveal-delay-2" style="margin:0 auto 32px; text-align:center">No pressure. No perfect life required. Just show up — and let us take care of the rest.</p>
+    <div class="reveal reveal-delay-3" style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
+      <a href="gods-house-of-rest.html#visit" class="btn-primary">Plan My Visit →</a>
+      <a href="contact.html#prayer" class="btn-secondary">Request Prayer</a>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="godshouseofrest/church-logo.png" alt="God's House of Rest Church" class="footer-logo-img">
+      <p class="footer-tagline">Find Rest · Find Family · Find Purpose</p>
+      <p class="footer-verse">"Come to Me, all you who labor and are heavy laden, and I will give you rest." — Matthew 11:28</p>
+      <div class="footer-contact-item">618 E Street Suite H, Chula Vista, CA 91910</div>
+      <div class="footer-contact-item"><a href="tel:6199319344">(619) 931-9344</a></div>
+      <div class="footer-contact-item"><a href="mailto:godshouseofrest2@yahoo.com">godshouseofrest2@yahoo.com</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <nav class="footer-links">
+        <a href="gods-house-of-rest.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="sermons.html">Sermons</a>
+        <a href="programs.html">Programs</a>
+        <a href="events.html">Events</a>
+        <a href="blog.html">Blog</a>
+        <a href="give.html">Give</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-title">Get Involved</div>
+      <nav class="footer-links">
+        <a href="contact.html#prayer">Prayer Request</a>
+        <a href="give.html">Give Online</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html#next-steps">Next Steps</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Times</div>
+      <div style="font-size:13px; color:var(--text-muted); line-height:2">
+        <strong style="color:var(--amber); font-size:11px; letter-spacing:0.1em; text-transform:uppercase">Sunday</strong><br>
+        Worship Service · 10:00 AM<br><br>
+        <strong style="color:var(--amber); font-size:11px; letter-spacing:0.1em; text-transform:uppercase">Wednesday</strong><br>
+        Bible Study · 7:00 PM
+      </div>
+      <div style="margin-top:24px; display:flex; flex-direction:column; gap:12px;">
+        <a href="https://www.facebook.com/profile.php?id=100069452470320" target="_blank" rel="noopener noreferrer" class="social-link">
+          <div class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          Follow on Facebook
+        </a>
+        <a href="https://www.instagram.com/ghorchurch/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="God's House of Rest on Instagram">
+          <div class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </div>
+          Follow on Instagram
+        </a>
+        <a href="https://www.youtube.com/channel/UCl1cLNmOBjjJfopU4FloKCw" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="God's House of Rest on YouTube">
+          <div class="social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          Subscribe on YouTube
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 God's House of Rest Church · Chula Vista, CA 91910</span>
+    <span style="display:flex; gap:20px">
+      <a href="contact.html" style="transition:color 0.2s">Contact</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  const floatingCta = document.getElementById('floatingCta');
+  window.addEventListener('scroll', () => {
+    const s = window.scrollY > 60;
+    navbar.classList.toggle('scrolled', s);
+    floatingCta.classList.toggle('visible', s);
+  }, { passive: true });
+
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
+  hamburger.addEventListener('click', () => { mobileMenu.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; });
+  mobileClose.addEventListener('click', () => { mobileMenu.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; });
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => { mobileMenu.classList.remove('open'); document.body.style.overflow=''; }));
+  document.addEventListener('keydown', e => { if (e.key==='Escape') { mobileMenu.classList.remove('open'); document.body.style.overflow=''; } });
+
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  const labelObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('line-in'); labelObs.unobserve(e.target); } });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.section-label').forEach(el => labelObs.observe(el));
+
+  // Cursor candlelight
+  (function(){
+    const isTouch = window.matchMedia('(hover:none) and (pointer:coarse)').matches;
+    if (isTouch) return;
+    const flame = document.getElementById('cursorFlame');
+    const core  = document.getElementById('cursorCore');
+    let mx=window.innerWidth/2, my=window.innerHeight/2;
+    let fx=mx, fy=my, cx=mx, cy=my;
+    let rafId;
+    window.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; }, {passive:true});
+    window.addEventListener('mouseenter', () => { flame.classList.add('lit'); core.classList.add('lit'); });
+    window.addEventListener('mouseleave', () => { flame.classList.remove('lit'); core.classList.remove('lit'); });
+    function tick(){
+      fx += (mx-fx)*0.052; fy += (my-fy)*0.052;
+      cx += (mx-cx)*0.110; cy += (my-cy)*0.110;
+      flame.style.transform = `translate(${fx}px,${fy}px)`;
+      core.style.transform  = `translate(${cx}px,${cy}px)`;
+      rafId = requestAnimationFrame(tick);
+    }
+    tick();
+  })();
+</script>
+<script src="site.js" defer></script>
+</body>
+</html>
