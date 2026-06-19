@@ -121,86 +121,99 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 16px 40px;
+    padding: 14px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Top scrim keeps the menu legible where it overlaps the bright hero photo */
-    background: linear-gradient(to bottom, rgba(6,14,26,0.72) 0%, rgba(6,14,26,0.28) 55%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(6,14,26,0.88) 0%, rgba(6,14,26,0.55) 65%, transparent 100%);
+    border-bottom: 1px solid rgba(212,175,55,0.18);
     transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   }
 
   #navbar.scrolled {
-    padding: 10px 40px;
-    background: rgba(10, 22, 40, 0.97);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 1px 0 rgba(200,134,10,0.2);
+    padding: 10px 48px;
+    background: rgba(8, 18, 36, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(212,175,55,0.28);
+    box-shadow: 0 4px 32px rgba(0,0,0,0.45);
   }
-  #navbar.scrolled .nav-logo { padding: 4px 0; }
-  #navbar.scrolled .nav-logo-img { height: 36px !important; width: 36px !important; max-width: 36px !important; }
+  #navbar.scrolled .nav-logo { padding: 2px 0; }
+  #navbar.scrolled .nav-logo-img { height: 46px !important; width: 46px !important; max-width: 46px !important; }
 
   .nav-logo {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 6px 0;
+    gap: 14px;
+    padding: 4px 0;
     transition: opacity 0.2s, transform 0.2s;
   }
-  .nav-logo:hover { opacity: 0.88; transform: translateY(-1px); }
+  .nav-logo:hover { opacity: 0.9; transform: translateY(-1px); }
 
-  /* Force logo image size — overrides site.css */
   .nav-logo-img { height: 64px !important; width: 64px !important; max-width: 64px !important; }
+
+  .nav-logo-text { display: flex; flex-direction: column; gap: 2px; }
 
   .nav-logo-name {
     font-family: 'Fraunces', serif;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 900;
     color: #fff;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     white-space: nowrap;
-    line-height: 1.2;
+    line-height: 1.1;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+  }
+
+  /* Show tagline under name — two-line logo block */
+  .nav-logo-tagline {
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    color: rgba(212,175,55,0.85);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   /* Gold divider between logo block and nav links */
   .nav-divider {
     width: 1px;
-    height: 28px;
-    background: linear-gradient(to bottom, transparent, rgba(212,175,55,0.6), transparent);
-    margin: 0 4px;
+    height: 36px;
+    background: linear-gradient(to bottom, transparent, rgba(212,175,55,0.7), transparent);
+    margin: 0 8px;
     flex-shrink: 0;
   }
-
-  /* Hide tagline in nav — keeps nav single-row */
-  .nav-logo-tagline { display: none; }
 
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 32px;
     list-style: none;
     flex: 1;
-    margin-left: clamp(16px, 2.5vw, 36px);
+    margin-left: clamp(16px, 2.5vw, 40px);
   }
   .nav-links li:last-child { margin-left: auto; }
 
   .nav-links a {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.13em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.78);
-    text-shadow: 0 1px 4px rgba(6,14,26,0.6);
+    color: rgba(245,240,232,0.82);
+    text-shadow: 0 1px 6px rgba(6,14,26,0.7);
     transition: color 0.2s;
     position: relative;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
   }
 
   .nav-links a::after {
     content: '';
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    height: 1.5px;
-    background: var(--gold);
+    height: 2px;
+    background: linear-gradient(90deg, #D4AF37, #F0D060);
+    border-radius: 1px;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.25s ease;
@@ -210,18 +223,19 @@
   .nav-links a:hover::after { transform: scaleX(1); }
 
   .nav-cta {
-    background: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #D4AF37 100%);
+    background: linear-gradient(135deg, #C9A227 0%, #F0D060 45%, #C9A227 100%);
     background-size: 200% 100%;
     color: #08152E !important;
-    padding: 9px 18px;
-    border-radius: 3px;
+    padding: 12px 24px;
+    border-radius: 4px;
     font-weight: 800 !important;
     white-space: nowrap;
-    font-size: 11px;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    border: 1px solid rgba(255,224,138,0.4);
     transition: background-position 0.4s ease, transform 0.2s, box-shadow 0.2s !important;
-    box-shadow: 0 2px 12px rgba(212,175,55,0.35);
+    box-shadow: 0 4px 20px rgba(212,175,55,0.45), inset 0 1px 0 rgba(255,255,255,0.25);
   }
 
   .nav-cta:hover {
