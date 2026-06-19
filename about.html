@@ -352,7 +352,7 @@
       <p class="footer-verse">"Come to Me, all you who labor and are heavy laden, and I will give you rest." — Matthew 11:28</p>
       <div class="footer-contact-item">618 E Street Suite H, Chula Vista, CA 91910</div>
       <div class="footer-contact-item"><a href="tel:6199319344">(619) 931-9344</a></div>
-      <div class="footer-contact-item"><a href="mailto:godshouseofrest2@yahoo.com">godshouseofrest2@yahoo.com</a></div>
+      <div class="footer-contact-item"><a href="mailto:info@godshouseofrest.com">info@godshouseofrest.com</a></div>
     </div>
     <div>
       <div class="footer-col-title">Quick Links</div>
@@ -422,7 +422,9 @@
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     navbar.classList.toggle('scrolled', y > 60);
-    floatingCta.classList.toggle('visible', y > 60);
+    const footer = document.querySelector('footer');
+    const nearFooter = footer && (y + window.innerHeight >= footer.offsetTop - 40);
+    floatingCta.classList.toggle('visible', y > 60 && !nearFooter);
     if (y > 120) {
       navbar.classList.toggle('nav-hidden', y > lastScrollY + 8);
       if (y < lastScrollY - 4) navbar.classList.remove('nav-hidden');
