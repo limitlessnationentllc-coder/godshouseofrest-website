@@ -116,62 +116,103 @@
   .nav-logo:hover svg > g { animation-play-state: paused; filter: drop-shadow(0 0 5px rgba(255,224,138,0.95)); }
   @media (prefers-reduced-motion: reduce) { .nav-logo svg > g { animation: none; } }
 
+  /* ─── NAV ENTRANCE ANIMATIONS ─── */
+  @keyframes navSlideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  @keyframes logoReveal {
+    from { transform: translateX(-24px) scale(0.88); opacity: 0; }
+    to   { transform: translateX(0)     scale(1);    opacity: 1; }
+  }
+  @keyframes linksFadeUp {
+    from { transform: translateY(10px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+  @keyframes goldPulse {
+    0%,100% { text-shadow: 0 0 0 rgba(212,175,55,0); }
+    50%      { text-shadow: 0 0 18px rgba(212,175,55,0.6), 0 0 40px rgba(212,175,55,0.2); }
+  }
+  @keyframes shimmerSweep {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+
   /* ─── NAVBAR ─── */
   #navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 14px 48px;
+    padding: 18px 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to bottom, rgba(6,14,26,0.88) 0%, rgba(6,14,26,0.55) 65%, transparent 100%);
-    border-bottom: 1px solid rgba(212,175,55,0.18);
-    transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(to bottom, rgba(6,14,26,0.92) 0%, rgba(6,14,26,0.6) 70%, transparent 100%);
+    border-bottom: 1px solid rgba(212,175,55,0.22);
+    transition: padding 0.35s ease, background 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+    animation: navSlideDown 0.7s cubic-bezier(0.22,1,0.36,1) both;
   }
 
+  /* Hide nav on scroll down, reveal on scroll up */
+  #navbar.nav-hidden { transform: translateY(-100%); }
+
   #navbar.scrolled {
-    padding: 10px 48px;
-    background: rgba(8, 18, 36, 0.97);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(212,175,55,0.28);
-    box-shadow: 0 4px 32px rgba(0,0,0,0.45);
+    padding: 12px 56px;
+    background: rgba(6, 14, 26, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(212,175,55,0.35);
+    box-shadow: 0 4px 40px rgba(0,0,0,0.55), 0 1px 0 rgba(212,175,55,0.2);
   }
-  #navbar.scrolled .nav-logo { padding: 2px 0; }
-  #navbar.scrolled .nav-logo-img { height: 46px !important; width: 46px !important; max-width: 46px !important; }
+  #navbar.scrolled .nav-logo-img { height: 52px !important; width: 52px !important; max-width: 52px !important; }
 
   .nav-logo {
     display: inline-flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     padding: 4px 0;
+    animation: logoReveal 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s both;
     transition: opacity 0.2s, transform 0.2s;
   }
-  .nav-logo:hover { opacity: 0.9; transform: translateY(-1px); }
+  .nav-logo:hover { opacity: 0.92; transform: translateY(-2px); }
 
-  .nav-logo-img { height: 64px !important; width: 64px !important; max-width: 64px !important; }
+  .nav-logo-img {
+    height: 76px !important; width: 76px !important; max-width: 76px !important;
+    filter: drop-shadow(0 4px 16px rgba(212,175,55,0.3));
+    transition: filter 0.3s;
+  }
+  .nav-logo:hover .nav-logo-img { filter: drop-shadow(0 6px 24px rgba(212,175,55,0.55)); }
 
-  .nav-logo-text { display: flex; flex-direction: column; gap: 2px; }
+  .nav-logo-text { display: flex; flex-direction: column; gap: 4px; }
 
   .nav-logo-name {
     font-family: 'Fraunces', serif;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
-    color: #fff;
     letter-spacing: 0.02em;
     white-space: nowrap;
-    line-height: 1.1;
-    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+    line-height: 1.05;
+    /* Shimmer gradient text */
+    background: linear-gradient(100deg, #fff 30%, #F0D060 50%, #fff 70%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerSweep 4s linear 1.5s infinite;
   }
 
-  /* Show tagline under name — two-line logo block */
+  /* Pause shimmer on hover, show gold glow instead */
+  .nav-logo:hover .nav-logo-name {
+    animation-play-state: paused;
+    filter: drop-shadow(0 0 12px rgba(212,175,55,0.7));
+  }
+
   .nav-logo-tagline {
     display: block;
-    font-size: 9px;
-    font-weight: 600;
-    color: rgba(212,175,55,0.85);
-    letter-spacing: 0.22em;
+    font-size: 10px;
+    font-weight: 700;
+    color: rgba(212,175,55,0.9);
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -193,6 +234,17 @@
     flex: 1;
     margin-left: clamp(20px, 3vw, 52px);
   }
+
+  .nav-links li {
+    animation: linksFadeUp 0.6s cubic-bezier(0.22,1,0.36,1) both;
+  }
+  .nav-links li:nth-child(1) { animation-delay: 0.35s; }
+  .nav-links li:nth-child(2) { animation-delay: 0.42s; }
+  .nav-links li:nth-child(3) { animation-delay: 0.49s; }
+  .nav-links li:nth-child(4) { animation-delay: 0.56s; }
+  .nav-links li:nth-child(5) { animation-delay: 0.63s; }
+  .nav-links li:nth-child(6) { animation-delay: 0.70s; }
+  .nav-links li:nth-child(7) { animation-delay: 0.77s; }
 
   .nav-links a {
     font-size: 14px;
@@ -2767,15 +2819,22 @@
   // ─── NAV SCROLL ───
   const navbar = document.getElementById('navbar');
   const floatingCta = document.getElementById('floatingCta');
+  let lastScrollY = 0;
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-      floatingCta.classList.add('visible');
-    } else {
-      navbar.classList.remove('scrolled');
-      floatingCta.classList.remove('visible');
+    const y = window.scrollY;
+
+    // Scrolled state (compact + frosted)
+    navbar.classList.toggle('scrolled', y > 60);
+    floatingCta.classList.toggle('visible', y > 60);
+
+    // Hide on scroll down, reveal on scroll up
+    if (y > 120) {
+      navbar.classList.toggle('nav-hidden', y > lastScrollY + 8);
+      if (y < lastScrollY - 4) navbar.classList.remove('nav-hidden');
     }
+
+    lastScrollY = y;
   }, { passive: true });
 
   // ─── MOBILE MENU ───
