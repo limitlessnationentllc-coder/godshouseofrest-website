@@ -155,6 +155,7 @@
       <span class="nav-logo-tagline">CHULA VISTA · MATTHEW 11:28</span>
     </span>
   </a>
+  <div class="nav-divider" aria-hidden="true"></div>
   <ul class="nav-links" role="list">
     <li><a href="about.html" style="color:var(--text)">About</a></li>
     <li><a href="programs.html">Programs</a></li>
@@ -163,8 +164,9 @@
     <li><a href="contact.html#prayer">Prayer</a></li>
     <li><a href="give.html">Give</a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="gods-house-of-rest.html#visit" class="nav-cta">Plan Your Visit</a></li>
+    
   </ul>
+  <a href="gods-house-of-rest.html#visit" class="nav-cta">Plan Your Visit</a>
   <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -414,10 +416,16 @@
 <script>
   const navbar = document.getElementById('navbar');
   const floatingCta = document.getElementById('floatingCta');
+  let lastScrollY = 0;
   window.addEventListener('scroll', () => {
-    const s = window.scrollY > 60;
-    navbar.classList.toggle('scrolled', s);
-    floatingCta.classList.toggle('visible', s);
+    const y = window.scrollY;
+    navbar.classList.toggle('scrolled', y > 60);
+    floatingCta.classList.toggle('visible', y > 60);
+    if (y > 120) {
+      navbar.classList.toggle('nav-hidden', y > lastScrollY + 8);
+      if (y < lastScrollY - 4) navbar.classList.remove('nav-hidden');
+    }
+    lastScrollY = y;
   }, { passive: true });
 
   const hamburger = document.getElementById('hamburgerBtn');
