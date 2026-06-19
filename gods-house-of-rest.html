@@ -1726,11 +1726,15 @@
     .hamburger     { display: flex; }
 
     /* Hero — stack: bright photo on top, words below */
-    .hero          { grid-template-columns: 1fr; grid-template-rows: 42vh auto; min-height: 100svh; }
-    .hero-media    { order: -1; }
+    .hero          { grid-template-columns: 1fr; grid-template-rows: 52vh auto; min-height: 100svh; }
+    .hero-media    { order: -1; padding-top: 72px; }
     .hero-media::before {
       background: linear-gradient(to bottom, transparent 42%, rgba(10,22,40,0.55) 78%, var(--navy) 100%);
     }
+    /* People slides — shift focus point down so faces clear the fixed navbar */
+    .hero-slide:nth-child(2) { background-position: center 20% !important; }
+    .hero-slide:nth-child(4) { background-position: center 15% !important; }
+    .hero-slide:nth-child(5) { background-position: center 15% !important; }
     .hero-media::after {
       left: 0; right: 0; top: auto; bottom: 0;
       width: auto; height: 2px;
