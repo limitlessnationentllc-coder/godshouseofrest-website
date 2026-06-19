@@ -156,7 +156,7 @@
 
   .nav-logo-name {
     font-family: 'Fraunces', serif;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 900;
     color: #fff;
     letter-spacing: 0.02em;
@@ -188,19 +188,18 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 36px;
     list-style: none;
     flex: 1;
-    margin-left: clamp(16px, 2.5vw, 40px);
+    margin-left: clamp(20px, 3vw, 52px);
   }
-  .nav-links li:last-child { margin-left: auto; }
 
   .nav-links a {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.13em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.82);
+    color: rgba(245,240,232,0.85);
     text-shadow: 0 1px 6px rgba(6,14,26,0.7);
     transition: color 0.2s;
     position: relative;
@@ -226,16 +225,18 @@
     background: linear-gradient(135deg, #C9A227 0%, #F0D060 45%, #C9A227 100%);
     background-size: 200% 100%;
     color: #08152E !important;
-    padding: 12px 24px;
-    border-radius: 4px;
+    padding: 18px 36px;
+    border-radius: 5px;
     font-weight: 800 !important;
     white-space: nowrap;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    border: 1px solid rgba(255,224,138,0.4);
+    border: 1px solid rgba(255,224,138,0.5);
     transition: background-position 0.4s ease, transform 0.2s, box-shadow 0.2s !important;
-    box-shadow: 0 4px 20px rgba(212,175,55,0.45), inset 0 1px 0 rgba(255,255,255,0.25);
+    box-shadow: 0 6px 28px rgba(212,175,55,0.5), inset 0 1px 0 rgba(255,255,255,0.3);
+    margin-left: 24px;
+    flex-shrink: 0;
   }
 
   .nav-cta:hover {
@@ -2033,8 +2034,8 @@
     <li><a href="blog.html">Blog</a></li>
     <li><a href="#pray">Prayer</a></li>
     <li><a href="#give">Give</a></li>
-    <li><a href="#visit" class="nav-cta">Plan Your Visit</a></li>
   </ul>
+  <a href="#visit" class="nav-cta">Plan Your Visit</a>
   <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
