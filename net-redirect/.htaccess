@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www\.)?godshouseofrest\.net [NC]
+RewriteRule ^(.*)$ https://www.godshouseofrest.com/$1 [R=301,L]

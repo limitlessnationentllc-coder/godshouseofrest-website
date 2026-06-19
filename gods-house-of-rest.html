@@ -1725,15 +1725,17 @@
     .hamburger     { display: flex; }
 
     /* Hero — stack: bright photo on top, words below */
-    .hero          { grid-template-columns: 1fr; grid-template-rows: 52vh auto; min-height: 100svh; }
-    .hero-media    { order: -1; padding-top: 72px; }
+    .hero          { grid-template-columns: 1fr; grid-template-rows: 56vh auto; min-height: 100svh; }
+    .hero-media    { order: -1; margin-top: 72px; }
     .hero-media::before {
       background: linear-gradient(to bottom, transparent 42%, rgba(10,22,40,0.55) 78%, var(--navy) 100%);
     }
-    /* People slides — shift focus point down so faces clear the fixed navbar */
-    .hero-slide:nth-child(2) { background-position: center 20% !important; }
-    .hero-slide:nth-child(4) { background-position: center 15% !important; }
-    .hero-slide:nth-child(5) { background-position: center 15% !important; }
+    /* All slides: shift down so subjects clear the fixed navbar */
+    .hero-slide:nth-child(1) { background-position: center 30% !important; }
+    .hero-slide:nth-child(2) { background-position: center 25% !important; }
+    .hero-slide:nth-child(3) { background-position: center 20% !important; }
+    .hero-slide:nth-child(4) { background-position: center 20% !important; }
+    .hero-slide:nth-child(5) { background-position: center 20% !important; }
     .hero-media::after {
       left: 0; right: 0; top: auto; bottom: 0;
       width: auto; height: 2px;
@@ -2885,7 +2887,7 @@
   </div>
 
   <div class="footer-bottom">
-    <span>© 2026 God's House of Rest Church · Chula Vista, CA 91910</span>
+    <span>© God's House of Rest Church · Chula Vista, CA 91910</span>
     <span style="display:flex; gap:20px">
       <a href="privacy.html" style="transition:color 0.2s" onmouseover="this.style.color='#F5F0E8'" onmouseout="this.style.color=''">Privacy</a>
       <a href="terms.html" style="transition:color 0.2s" onmouseover="this.style.color='#F5F0E8'" onmouseout="this.style.color=''">Terms</a>
