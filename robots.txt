@@ -1,4 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://godshouseofrest.org/sitemap.xml
+Sitemap: https://godshouseofrest.com/sitemap.xml
