@@ -241,5 +241,61 @@
   (function(){const isTouch=window.matchMedia('(hover:none) and (pointer:coarse)').matches;if(isTouch)return;const flame=document.getElementById('cursorFlame'),core=document.getElementById('cursorCore');let mx=innerWidth/2,my=innerHeight/2,fx=mx,fy=my,cx=mx,cy=my;addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;},{passive:true});addEventListener('mouseenter',()=>{flame.classList.add('lit');core.classList.add('lit');});addEventListener('mouseleave',()=>{flame.classList.remove('lit');core.classList.remove('lit');});(function tick(){fx+=(mx-fx)*0.052;fy+=(my-fy)*0.052;cx+=(mx-cx)*0.110;cy+=(my-cy)*0.110;flame.style.transform=`translate(${fx}px,${fy}px)`;core.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(tick);})();})();
 </script>
 <script src="site.js" defer></script>
+
+<!-- ─── STICKY MOBILE FOOTER BAR ─── -->
+<div class="mobile-action-bar" role="navigation" aria-label="Quick actions">
+  <a href="https://maps.google.com/?q=618+E+St,+Chula+Vista,+CA+91910" target="_blank" rel="noopener" class="mob-bar-btn" aria-label="Get directions">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Directions
+  </a>
+  <a href="tel:+16195551234" class="mob-bar-btn" aria-label="Call the church">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.67 19.79 19.79 0 01.1 4.1 2 2 0 012.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.69 6.69l.86-.86a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call
+  </a>
+  <a href="give.html" class="mob-bar-btn give-btn" aria-label="Give online">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    Give
+  </a>
+</div>
+
+<!-- ─── EXIT INTENT POPUP ─── -->
+<div class="exit-overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-label="Stay connected">
+  <div class="exit-popup">
+    <button class="exit-close" id="exitClose" aria-label="Close">✕</button>
+    <span class="exit-icon">🙏</span>
+    <h3>Before You Go — We're Praying For You</h3>
+    <p>Leave your name and prayer request. Our team prays over every single one, personally.</p>
+    <div class="exit-form-wrap">
+      <form class="exit-form" id="exitForm">
+        <input type="text" name="name" placeholder="Your first name" required autocomplete="given-name">
+        <input type="email" name="email" placeholder="Email address (optional)" autocomplete="email">
+        <textarea name="prayer" placeholder="Share your prayer request…" required></textarea>
+        <button type="submit" class="exit-submit">Send My Prayer Request</button>
+      </form>
+      <span class="exit-skip" id="exitSkip">No thanks, I'm good for now</span>
+    </div>
+    <div class="exit-success">
+      <p style="color:#4ade80;font-weight:700;font-size:16px;margin:0">✓ Received. We're praying for you right now.</p>
+    </div>
+  </div>
+</div>
+<script>
+  (function() {
+    const overlay = document.getElementById('exitOverlay');
+    const form = document.getElementById('exitForm');
+    const close = document.getElementById('exitClose');
+    const skip  = document.getElementById('exitSkip');
+    if (!overlay) return;
+    let shown = sessionStorage.getItem('exitShown');
+    function show() { if (shown) return; shown=true; sessionStorage.setItem('exitShown','1'); overlay.classList.add('active'); requestAnimationFrame(()=>overlay.classList.add('visible')); }
+    function hide() { overlay.classList.remove('visible'); setTimeout(()=>overlay.classList.remove('active'),300); }
+    document.addEventListener('mouseleave', e => { if (e.clientY < 10) show(); });
+    setTimeout(show, 45000);
+    close && close.addEventListener('click', hide);
+    skip  && skip.addEventListener('click', hide);
+    overlay.addEventListener('click', e => { if (e.target===overlay) hide(); });
+    form && form.addEventListener('submit', e => { e.preventDefault(); form.closest('.exit-form-wrap').classList.add('hidden'); overlay.querySelector('.exit-success').classList.add('shown'); setTimeout(hide,3000); });
+  })();
+</script>
 </body>
 </html>

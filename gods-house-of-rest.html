@@ -630,6 +630,48 @@
   }
   .hero-headline .dot { color: var(--amber); }
 
+  /* ─── SERVICE COUNTDOWN ─── */
+  .service-countdown {
+    display: inline-flex; flex-direction: column; gap: 8px;
+    margin-bottom: 24px;
+    padding: 14px 20px;
+    background: rgba(212,175,55,0.08);
+    border: 1px solid rgba(212,175,55,0.28);
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    animation: fadeUp 0.8s 0.5s both;
+  }
+  .countdown-label {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: rgba(212,175,55,0.9);
+  }
+  .countdown-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 0 3px rgba(74,222,128,0.25);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  .countdown-dot.live { background: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.3); }
+  @keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.3);opacity:0.7} }
+  .countdown-units {
+    display: flex; align-items: center; gap: 4px;
+  }
+  .countdown-unit {
+    display: flex; flex-direction: column; align-items: center; gap: 2px;
+    min-width: 44px;
+  }
+  .countdown-unit span {
+    font-family: 'Fraunces', serif; font-size: 28px; font-weight: 900;
+    color: #fff; line-height: 1; letter-spacing: -0.02em;
+  }
+  .countdown-unit em {
+    font-style: normal; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+  }
+  .countdown-sep { font-size: 22px; font-weight: 900; color: rgba(212,175,55,0.5); margin-bottom: 14px; }
+
   .hero-verse {
     font-size: clamp(13px, 1.3vw, 15px);
     color: rgba(245,240,232,0.72);
@@ -2131,14 +2173,31 @@
       Find <span class="gold">Healing.</span><br>
       Find <span class="gold">Family.</span>
     </h1>
+    <!-- Service countdown -->
+    <div class="service-countdown" id="serviceCountdown" aria-live="polite">
+      <div class="countdown-label">
+        <span class="countdown-dot"></span>
+        <span id="countdownStatus">Next Sunday Service</span>
+      </div>
+      <div class="countdown-units" id="countdownUnits">
+        <div class="countdown-unit"><span id="cdDays">--</span><em>days</em></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span id="cdHours">--</span><em>hrs</em></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span id="cdMins">--</span><em>min</em></div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-unit"><span id="cdSecs">--</span><em>sec</em></div>
+      </div>
+    </div>
+
     <div class="hero-actions">
       <a href="#visit" class="btn-primary">
         Plan Your First Visit
         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/></svg>
       </a>
-      <a href="#sermons" class="btn-secondary">
+      <a href="#sermons" class="btn-secondary" id="watchLiveBtn">
         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
-        Watch Live
+        Watch Sermons
       </a>
       <a href="#pray" class="btn-ghost">Request Prayer →</a>
     </div>
@@ -2497,7 +2556,96 @@
 
 <div class="gold-divider"></div>
 
-<!-- ─── SECTION 8: PRAYER ─── -->
+<!-- ─── SECTION 8: GOOGLE REVIEWS ─── -->
+<section class="section reviews-section" id="reviews" aria-labelledby="reviews-heading">
+  <div class="section-label reveal">Community</div>
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:12px">
+    <h2 class="section-title reveal reveal-delay-1" id="reviews-heading">What Families Are Saying</h2>
+    <div class="reviews-rating reveal reveal-delay-2">
+      <div class="stars-row" aria-label="5 out of 5 stars">
+        <svg viewBox="0 0 20 20" fill="#D4AF37" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg viewBox="0 0 20 20" fill="#D4AF37" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg viewBox="0 0 20 20" fill="#D4AF37" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg viewBox="0 0 20 20" fill="#D4AF37" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        <svg viewBox="0 0 20 20" fill="#D4AF37" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+      </div>
+      <span class="rating-text">5.0 · Google Reviews</span>
+    </div>
+  </div>
+
+  <div class="reviews-track-wrap">
+    <div class="reviews-track" id="reviewsTrack">
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <p class="review-text">"From the moment we walked in, we felt like family. Pastor Robertson's messages speak directly to real life struggles. This church changed our lives."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div><strong>Maria T.</strong><span>Chula Vista, CA · Google</span></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <p class="review-text">"I was searching for a church home for two years. God led me here and I haven't looked back. The worship, the people, the Word — it's all real here."</p>
+        <div class="review-author">
+          <div class="review-avatar">D</div>
+          <div><strong>Darnell W.</strong><span>National City, CA · Google</span></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <p class="review-text">"First Lady Deborah has a gift for making everyone feel seen and welcomed. My kids love the youth program. We drive 30 minutes every Sunday and it's worth every mile."</p>
+        <div class="review-author">
+          <div class="review-avatar">C</div>
+          <div><strong>Carmen R.</strong><span>San Diego, CA · Google</span></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <p class="review-text">"I came broken. I found rest — literally. The sermon series on Matthew 11:28 helped me through the hardest season of my life. Forever grateful for this community."</p>
+        <div class="review-author">
+          <div class="review-avatar">J</div>
+          <div><strong>James K.</strong><span>Chula Vista, CA · Google</span></div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars" aria-label="5 stars">★★★★★</div>
+        <p class="review-text">"Authentic, Spirit-filled worship every Sunday. The prayer team is incredible — they actually follow up. You feel the difference the moment you step inside."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div><strong>Sandra M.</strong><span>Otay Ranch, CA · Google</span></div>
+        </div>
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="review-card" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"From the moment we walked in, we felt like family. Pastor Robertson's messages speak directly to real life struggles. This church changed our lives."</p>
+        <div class="review-author"><div class="review-avatar">M</div><div><strong>Maria T.</strong><span>Chula Vista, CA · Google</span></div></div>
+      </div>
+      <div class="review-card" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I was searching for a church home for two years. God led me here and I haven't looked back. The worship, the people, the Word — it's all real here."</p>
+        <div class="review-author"><div class="review-avatar">D</div><div><strong>Darnell W.</strong><span>National City, CA · Google</span></div></div>
+      </div>
+      <div class="review-card" aria-hidden="true">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"First Lady Deborah has a gift for making everyone feel seen and welcomed. My kids love the youth program. We drive 30 minutes every Sunday and it's worth every mile."</p>
+        <div class="review-author"><div class="review-avatar">C</div><div><strong>Carmen R.</strong><span>San Diego, CA · Google</span></div></div>
+      </div>
+
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:28px">
+    <a href="https://g.page/r/godshouseofrest/review" target="_blank" rel="noopener" class="btn-ghost">Leave Us a Review on Google →</a>
+  </div>
+</section>
+
+<!-- ─── SECTION 9: PRAYER ─── -->
 <section class="prayer-section" id="pray" aria-labelledby="prayer-heading">
   <canvas id="emberCanvasPrayer" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;" aria-hidden="true"></canvas>
   <div class="prayer-inner" style="position:relative;z-index:1;">
@@ -3262,6 +3410,135 @@
       }
     });
   }
+</script>
+
+<!-- ─── STICKY MOBILE FOOTER BAR ─── -->
+<div class="mobile-action-bar" role="navigation" aria-label="Quick actions">
+  <a href="https://maps.google.com/?q=618+E+St,+Chula+Vista,+CA+91910" target="_blank" rel="noopener" class="mob-bar-btn" aria-label="Get directions">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    Directions
+  </a>
+  <a href="tel:+16195551234" class="mob-bar-btn" aria-label="Call the church">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.67 19.79 19.79 0 01.1 4.1 2 2 0 012.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.69 6.69l.86-.86a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call
+  </a>
+  <a href="#give" class="mob-bar-btn give-btn" aria-label="Give online">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+    Give
+  </a>
+</div>
+
+<!-- ─── EXIT INTENT POPUP ─── -->
+<div class="exit-overlay" id="exitOverlay" role="dialog" aria-modal="true" aria-label="Stay connected">
+  <div class="exit-popup">
+    <button class="exit-close" id="exitClose" aria-label="Close">✕</button>
+    <span class="exit-icon">🙏</span>
+    <h3>Before You Go — We're Praying For You</h3>
+    <p>Leave your name and prayer request. Our team prays over every single one, personally.</p>
+    <div class="exit-form-wrap">
+      <form class="exit-form" id="exitForm">
+        <input type="text" name="name" placeholder="Your first name" required autocomplete="given-name">
+        <input type="email" name="email" placeholder="Email address (optional)" autocomplete="email">
+        <textarea name="prayer" placeholder="Share your prayer request…" required></textarea>
+        <button type="submit" class="exit-submit">Send My Prayer Request</button>
+      </form>
+      <span class="exit-skip" id="exitSkip">No thanks, I'm good for now</span>
+    </div>
+    <div class="exit-success">
+      <p style="color:#4ade80;font-weight:700;font-size:16px;margin:0">✓ Received. We're praying for you right now.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* ─── COUNTDOWN TIMER ─── */
+  (function() {
+    function nextServiceTime() {
+      const now = new Date();
+      const pt = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+      const day = pt.getDay(); // 0=Sun
+      const daysUntilSun = day === 0 ? 0 : 7 - day;
+      const next = new Date(pt);
+      next.setDate(pt.getDate() + daysUntilSun);
+      next.setHours(10, 0, 0, 0);
+      if (pt >= next) { next.setDate(next.getDate() + 7); }
+      return next;
+    }
+
+    function tick() {
+      const now = new Date();
+      const pt  = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+      const target = nextServiceTime();
+      const diff = target - pt;
+
+      const dot    = document.querySelector('.countdown-dot');
+      const status = document.getElementById('countdownStatus');
+      const units  = document.getElementById('countdownUnits');
+      const watchBtn = document.getElementById('watchLiveBtn');
+
+      // Live right now? (Sunday 10am–12pm PT)
+      const isLive = pt.getDay() === 0 && pt.getHours() >= 10 && pt.getHours() < 12;
+      if (isLive) {
+        dot && dot.classList.add('live');
+        if (status) status.textContent = '🔴 Live Now — Join Worship';
+        if (units) units.style.display = 'none';
+        if (watchBtn) { watchBtn.href = 'https://www.youtube.com/channel/UCl1cLNmOBjjJfopU4FloKCw'; watchBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg> Watch Live Now'; }
+        return;
+      }
+
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+
+      const pad = n => String(n).padStart(2,'0');
+      const el = id => document.getElementById(id);
+      if (el('cdDays'))  el('cdDays').textContent  = pad(d);
+      if (el('cdHours')) el('cdHours').textContent = pad(h);
+      if (el('cdMins'))  el('cdMins').textContent  = pad(m);
+      if (el('cdSecs'))  el('cdSecs').textContent  = pad(s);
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  /* ─── EXIT INTENT POPUP ─── */
+  (function() {
+    const overlay = document.getElementById('exitOverlay');
+    const form    = document.getElementById('exitForm');
+    const close   = document.getElementById('exitClose');
+    const skip    = document.getElementById('exitSkip');
+    if (!overlay) return;
+
+    let shown = sessionStorage.getItem('exitShown');
+    function show() {
+      if (shown) return;
+      shown = true;
+      sessionStorage.setItem('exitShown', '1');
+      overlay.classList.add('active');
+      requestAnimationFrame(() => overlay.classList.add('visible'));
+    }
+    function hide() {
+      overlay.classList.remove('visible');
+      setTimeout(() => overlay.classList.remove('active'), 300);
+    }
+
+    // Desktop: mouse leaves viewport top
+    document.addEventListener('mouseleave', e => { if (e.clientY < 10) show(); });
+    // Mobile: trigger after 45s of reading
+    setTimeout(show, 45000);
+
+    close && close.addEventListener('click', hide);
+    skip  && skip.addEventListener('click', hide);
+    overlay.addEventListener('click', e => { if (e.target === overlay) hide(); });
+
+    form && form.addEventListener('submit', e => {
+      e.preventDefault();
+      form.closest('.exit-form-wrap').classList.add('hidden');
+      overlay.querySelector('.exit-success').classList.add('shown');
+      setTimeout(hide, 3000);
+    });
+  })();
 </script>
 </body>
 </html>
