@@ -149,15 +149,25 @@
   .nav-logo:hover { opacity: 0.88; transform: translateY(-1px); }
 
   /* Force logo image size — overrides site.css */
-  .nav-logo-img { height: 44px !important; width: 44px !important; max-width: 44px !important; }
+  .nav-logo-img { height: 50px !important; width: 50px !important; max-width: 50px !important; }
 
   .nav-logo-name {
     font-family: 'Fraunces', serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 900;
-    color: var(--text);
-    letter-spacing: 0.02em;
+    color: #fff;
+    letter-spacing: 0.03em;
     white-space: nowrap;
+    line-height: 1.2;
+  }
+
+  /* Gold divider between logo block and nav links */
+  .nav-divider {
+    width: 1px;
+    height: 28px;
+    background: linear-gradient(to bottom, transparent, rgba(212,175,55,0.6), transparent);
+    margin: 0 4px;
+    flex-shrink: 0;
   }
 
   /* Hide tagline in nav — keeps nav single-row */
@@ -166,39 +176,59 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
     list-style: none;
     flex: 1;
-    margin-left: clamp(20px, 3.5vw, 52px);
+    margin-left: clamp(16px, 2.5vw, 36px);
   }
-  /* Push only the CTA to the far right; About/Programs sit just after the logo */
   .nav-links li:last-child { margin-left: auto; }
 
   .nav-links a {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(245,240,232,0.82);
-    text-shadow: 0 1px 4px rgba(6,14,26,0.5);
+    color: rgba(245,240,232,0.78);
+    text-shadow: 0 1px 4px rgba(6,14,26,0.6);
     transition: color 0.2s;
+    position: relative;
+    padding-bottom: 3px;
   }
 
-  .nav-links a:hover { color: var(--text); }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1.5px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-links a:hover { color: #fff; }
+  .nav-links a:hover::after { transform: scaleX(1); }
 
   .nav-cta {
-    background: var(--amber);
-    color: var(--navy) !important;
-    padding: 8px 14px;
-    border-radius: 4px;
-    font-weight: 700 !important;
+    background: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #D4AF37 100%);
+    background-size: 200% 100%;
+    color: #08152E !important;
+    padding: 9px 18px;
+    border-radius: 3px;
+    font-weight: 800 !important;
     white-space: nowrap;
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    transition: background 0.2s, transform 0.2s !important;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: background-position 0.4s ease, transform 0.2s, box-shadow 0.2s !important;
+    box-shadow: 0 2px 12px rgba(212,175,55,0.35);
   }
 
-  .nav-cta:hover { background: var(--gold) !important; transform: translateY(-1px); }
+  .nav-cta:hover {
+    background-position: 100% 0 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(212,175,55,0.55) !important;
+  }
 
   .hamburger {
     display: none;
@@ -1980,6 +2010,7 @@
       <span class="nav-logo-tagline">CHULA VISTA · MATTHEW 11:28</span>
     </span>
   </a>
+  <div class="nav-divider" aria-hidden="true"></div>
   <ul class="nav-links" role="list">
     <li><a href="#about">About</a></li>
     <li><a href="#programs">Programs</a></li>
