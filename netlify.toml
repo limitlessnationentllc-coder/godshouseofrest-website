@@ -1,6 +1,11 @@
 [build]
   publish = "."
 
+[[redirects]]
+  from = "/"
+  to = "/gods-house-of-rest.html"
+  status = 200
+
 # Security headers for the admin portal
 [[headers]]
   for = "/admin/*"
