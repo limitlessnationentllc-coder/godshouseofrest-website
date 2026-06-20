@@ -1725,18 +1725,18 @@
     .nav-links     { display: none; }
     .hamburger     { display: flex; }
 
-    /* Hero — stack: bright photo on top, words below */
-    .hero          { grid-template-columns: 1fr; grid-template-rows: 56vh auto; min-height: 100svh; }
-    .hero-media    { order: -1; margin-top: 72px; }
+    /* Hero — stack: photo on top (full height below nav), words below */
+    .hero          { grid-template-columns: 1fr; grid-template-rows: calc(56vh - 116px) auto; min-height: 100svh; padding-top: 116px; }
+    .hero-media    { order: -1; }
     .hero-media::before {
       background: linear-gradient(to bottom, transparent 42%, rgba(10,22,40,0.55) 78%, var(--navy) 100%);
     }
-    /* All slides: shift down so subjects clear the fixed navbar */
-    .hero-slide:nth-child(1) { background-position: center 30% !important; }
-    .hero-slide:nth-child(2) { background-position: center 25% !important; }
-    .hero-slide:nth-child(3) { background-position: center 20% !important; }
-    .hero-slide:nth-child(4) { background-position: center 20% !important; }
-    .hero-slide:nth-child(5) { background-position: center 20% !important; }
+    /* Portrait slides — keep faces in frame */
+    .hero-slide:nth-child(1) { background-position: center 15% !important; }
+    .hero-slide:nth-child(2) { background-position: center top !important; }
+    .hero-slide:nth-child(3) { background-position: center top !important; }
+    .hero-slide:nth-child(4) { background-position: center 10% !important; }
+    .hero-slide:nth-child(5) { background-position: center 10% !important; }
     .hero-media::after {
       left: 0; right: 0; top: auto; bottom: 0;
       width: auto; height: 2px;
