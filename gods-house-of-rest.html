@@ -604,11 +604,11 @@
   }
   .hero-headline::after {
     content: '';
-    position: absolute; left: 4%; top: -60px;
-    width: min(360px, 78%); height: 2px; border-radius: 999px;
+    position: absolute; left: 4%; top: -18px;
+    width: min(320px, 72%); height: 2px; border-radius: 999px;
     pointer-events: none;
     background: linear-gradient(to right, transparent, #C8860A 20%, #FFF0C0 50%, #C8860A 80%, transparent);
-    box-shadow: 0 0 15px 3px rgba(255,224,138,0.7), 0 0 42px 9px rgba(200,134,10,0.38);
+    box-shadow: 0 0 10px 2px rgba(255,224,138,0.55), 0 0 22px 5px rgba(200,134,10,0.28);
     animation: lampLineFlicker 4.5s ease-in-out infinite;
   }
   @keyframes lampGlowPulse {
@@ -1745,6 +1745,8 @@
     }
     .hero-content  { align-self: start; padding: 34px 22px 54px; }
     .hero-verse    { font-size: 14px; max-width: 100%; }
+    .hero-headline::after { display: none; }
+    .hero-headline::before { display: none; }
     .hero-dots     { bottom: 14px; right: 16px; }
 
     /* Mission */
