@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "godshouseofrest-website",
   "compatibility_date": "2026-06-20",
@@ -6,7 +6,7 @@
     "enabled": true
   },
   "assets": {
-    "directory": "admin"
+    "directory": "."
   },
   "compatibility_flags": [
     "nodejs_compat"
