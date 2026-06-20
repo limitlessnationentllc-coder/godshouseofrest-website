@@ -157,28 +157,29 @@
         Use this form for general questions, prayer requests, or to let us know you're planning to visit. We personally read every message.
       </p>
       <div class="prayer-form-wrap reveal reveal-delay-3">
-        <form id="contactForm" novalidate>
+        <form id="contactForm" action="https://formspree.io/f/mqeorgqw" method="POST">
+          <input type="hidden" name="_subject" value="Contact — God's House of Rest">
           <div class="form-group">
             <label class="form-label" for="c-name">Your Name</label>
-            <input class="form-input" type="text" id="c-name" placeholder="First name is fine" required autocomplete="given-name">
+            <input class="form-input" type="text" id="c-name" name="name" placeholder="First name is fine" required autocomplete="given-name">
           </div>
           <div class="form-group">
             <label class="form-label" for="c-email">Email Address</label>
-            <input class="form-input" type="email" id="c-email" placeholder="your@email.com" required autocomplete="email">
+            <input class="form-input" type="email" id="c-email" name="email" placeholder="your@email.com" required autocomplete="email">
           </div>
           <div class="form-group">
             <label class="form-label" for="c-subject">Subject</label>
-            <select class="form-input form-select" id="c-subject">
+            <select class="form-input form-select" id="c-subject" name="subject">
               <option value="">Select a subject…</option>
-              <option value="visit">Planning a Visit</option>
-              <option value="prayer">Prayer Request</option>
-              <option value="ministry">Ministry / Volunteering</option>
-              <option value="general">General Question</option>
+              <option value="Planning a Visit">Planning a Visit</option>
+              <option value="Prayer Request">Prayer Request</option>
+              <option value="Ministry / Volunteering">Ministry / Volunteering</option>
+              <option value="General Question">General Question</option>
             </select>
           </div>
           <div class="form-group">
             <label class="form-label" for="c-message">Your Message</label>
-            <textarea class="form-textarea" id="c-message" placeholder="Share what's on your heart…" required></textarea>
+            <textarea class="form-textarea" id="c-message" name="message" placeholder="Share what's on your heart…" required></textarea>
           </div>
           <button type="submit" class="btn-primary" style="width:100%; justify-content:center">
             Send Message →
@@ -230,7 +231,6 @@
   mc.addEventListener('click',()=>{mm.classList.remove('open');hbg.setAttribute('aria-expanded','false');document.body.style.overflow='';});
   document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>{mm.classList.remove('open');document.body.style.overflow='';}));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){mm.classList.remove('open');document.body.style.overflow='';}});
-  document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('contactConfirm').classList.add('show');});
   const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
   const lo=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('line-in');lo.unobserve(e.target);}}),{threshold:0.5});
