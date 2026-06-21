@@ -1724,7 +1724,12 @@
     #navbar        { padding: 14px 20px; }
     #navbar.scrolled { padding: 12px 20px; }
     .nav-links     { display: none; }
-    .hamburger     { display: flex; }
+    .hamburger     { display: flex; flex-shrink: 0; }
+    .nav-logo-img  { height: 48px !important; width: 48px !important; max-width: 48px !important; }
+    .nav-logo      { gap: 10px; }
+    .nav-logo-name { font-size: 17px; }
+    .nav-logo-tagline { display: none; }
+    .nav-divider   { display: none; }
 
     /* Hero — stack: photo on top (full height below nav), words below */
     .hero          { grid-template-columns: 1fr; grid-template-rows: calc(56vh - 116px) auto; min-height: 100svh; padding-top: 116px; }
