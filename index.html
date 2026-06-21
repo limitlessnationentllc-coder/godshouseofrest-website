@@ -518,11 +518,12 @@
   }
 
   /* Rotating feature photos (per selection) */
-  .hero-slide:nth-child(1) { background-image: url('godshouseofrest/baptism-rebirth.jpg'); background-position: center; }
-  .hero-slide:nth-child(2) { background-image: url('godshouseofrest/graduation-celebration.jpg'); background-position: center top; }
-  .hero-slide:nth-child(3) { background-image: url('godshouseofrest/church-interior-2.jpg'); background-position: center; }
-  .hero-slide:nth-child(4) { background-image: url('godshouseofrest/pastor-robertson-headshot.jpg'); background-position: center top; }
-  .hero-slide:nth-child(5) { background-image: url('godshouseofrest/first-lady-deborah-robertson.jpg'); background-position: center top; }
+  .hero-slide:nth-child(1) { background-image: url('pastor-preaching.jpg'); background-position: center 35%; }
+  .hero-slide:nth-child(2) { background-image: url('godshouseofrest/baptism-rebirth.jpg'); background-position: center; }
+  .hero-slide:nth-child(3) { background-image: url('godshouseofrest/graduation-celebration.jpg'); background-position: center top; }
+  .hero-slide:nth-child(4) { background-image: url('godshouseofrest/church-interior-2.jpg'); background-position: center; }
+  .hero-slide:nth-child(5) { background-image: url('godshouseofrest/pastor-robertson-headshot.jpg'); background-position: center top; }
+  .hero-slide:nth-child(6) { background-image: url('godshouseofrest/first-lady-deborah-robertson.jpg'); background-position: center top; }
 
   /* Seam blend: photo melts into the navy on its left edge + subtle bottom depth.
      Keeps ~75% of the photo bright and untouched. */
@@ -1724,10 +1725,10 @@
     #navbar        { padding: 14px 20px; }
     #navbar.scrolled { padding: 12px 20px; }
     .nav-links     { display: none; }
-    .hamburger     { display: flex; flex-shrink: 0; }
-    .nav-logo-img  { height: 48px !important; width: 48px !important; max-width: 48px !important; }
-    .nav-logo      { gap: 10px; }
-    .nav-logo-name { font-size: 17px; }
+    .hamburger     { display: flex; flex-shrink: 0; margin-left: 12px; }
+    .nav-logo-img  { height: 58px !important; width: 58px !important; max-width: 58px !important; }
+    .nav-logo      { gap: 10px; min-width: 0; }
+    .nav-logo-name { font-size: 20px; white-space: nowrap; }
     .nav-logo-tagline { display: none; }
     .nav-divider   { display: none; }
 
@@ -1738,11 +1739,12 @@
       background: linear-gradient(to bottom, transparent 42%, rgba(10,22,40,0.55) 78%, var(--navy) 100%);
     }
     /* Portrait slides — keep faces in frame */
-    .hero-slide:nth-child(1) { background-position: center 15% !important; }
-    .hero-slide:nth-child(2) { background-position: center top !important; }
+    .hero-slide:nth-child(1) { background-position: center 40% !important; }
+    .hero-slide:nth-child(2) { background-position: center 15% !important; }
     .hero-slide:nth-child(3) { background-position: center top !important; }
-    .hero-slide:nth-child(4) { background-position: center 10% !important; }
+    .hero-slide:nth-child(4) { background-position: center top !important; }
     .hero-slide:nth-child(5) { background-position: center 10% !important; }
+    .hero-slide:nth-child(6) { background-position: center 10% !important; }
     .hero-media::after {
       left: 0; right: 0; top: auto; bottom: 0;
       width: auto; height: 2px;
@@ -2228,6 +2230,7 @@
       <div class="hero-slide"></div>
       <div class="hero-slide"></div>
       <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
     </div>
     <div class="hero-dots">
       <button class="hero-dot active" onclick="goToSlide(0)" aria-label="Show photo 1"></button>
@@ -2235,6 +2238,7 @@
       <button class="hero-dot" onclick="goToSlide(2)" aria-label="Show photo 3"></button>
       <button class="hero-dot" onclick="goToSlide(3)" aria-label="Show photo 4"></button>
       <button class="hero-dot" onclick="goToSlide(4)" aria-label="Show photo 5"></button>
+      <button class="hero-dot" onclick="goToSlide(5)" aria-label="Show photo 6"></button>
     </div>
   </div>
 </section>
@@ -2710,7 +2714,7 @@
   <p class="section-sub reveal reveal-delay-2" style="margin-bottom:48px">This is what it looks like when broken people find rest together.</p>
 
   <div class="gallery-grid" role="list">
-    <div class="gallery-item reveal reveal-delay-1" role="listitem" tabindex="0" onclick="openLightbox('Sunday Message','pastor-preaching.jpg')" aria-label="Pastor Robertson delivering Sunday message - click to view larger" style="background-image:url('pastor-preaching.jpg'); background-size:cover; background-position:center top;">
+    <div class="gallery-item reveal reveal-delay-1" role="listitem" tabindex="0" onclick="openLightbox('Sunday Message','pastor-preaching.jpg')" aria-label="Pastor Robertson delivering Sunday message - click to view larger" style="background-image:url('pastor-preaching.jpg'); background-size:cover; background-position:center 35%;">
       <div class="gallery-label">Sunday Message</div>
     </div>
     <div class="gallery-item reveal reveal-delay-2" role="listitem" tabindex="0" onclick="openLightbox('Sunday Worship','godshouseofrest/487567550_1204958107966409_8128790692115245161_n.jpg')" aria-label="Sunday worship - click to view larger" style="background-image:url('godshouseofrest/487567550_1204958107966409_8128790692115245161_n.jpg'); background-size:cover; background-position:center;">
