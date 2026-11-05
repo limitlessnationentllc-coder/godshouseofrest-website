@@ -12,7 +12,9 @@
   },
   "routes": [
     { "pattern": "www.godshouseofrest.com/*", "zone_name": "godshouseofrest.com" },
-    { "pattern": "www.godshouseofrest.com", "zone_name": "godshouseofrest.com" }
+    { "pattern": "www.godshouseofrest.com", "zone_name": "godshouseofrest.com" },
+    { "pattern": "godshouseofrest.com/*", "zone_name": "godshouseofrest.com" },
+    { "pattern": "godshouseofrest.com", "zone_name": "godshouseofrest.com" }
   ],
   "compatibility_flags": [
     "nodejs_compat"
