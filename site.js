@@ -117,3 +117,22 @@
     });
   }
 })();
+
+/* ── Hero side card: fills the empty right side of page heroes ── */
+(function () {
+  var inner = document.querySelector('.page-hero-inner');
+  if (!inner || inner.querySelector('.page-hero-card')) return;
+  var text = document.createElement('div');
+  text.className = 'page-hero-text';
+  while (inner.firstChild) text.appendChild(inner.firstChild);
+  inner.appendChild(text);
+  var card = document.createElement('aside');
+  card.className = 'page-hero-card';
+  card.setAttribute('aria-label', 'Visit us');
+  card.innerHTML = '<h3>Join Us</h3>' +
+    '<p><strong>Sunday Worship</strong>11:00 AM</p>' +
+    '<p><strong>Bible Study</strong>Tuesdays, 7:00 PM</p>' +
+    '<p><strong>Location</strong>618 E Street Suite H<br>Chula Vista, CA 91910</p>' +
+    '<a class="btn-primary" href="/#visit">Plan Your Visit</a>';
+  inner.appendChild(card);
+})();

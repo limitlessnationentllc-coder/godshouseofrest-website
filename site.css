@@ -685,3 +685,15 @@ footer { background: #06101e; padding: 80px 40px 40px; }
 .article-img { max-width: 760px; margin: 32px auto; border-radius: 12px; overflow: hidden; }
 .article-img img { width: 100%; display: block; }
 .article-img figcaption { font-size: 12.5px; color: var(--text-muted); text-align: center; padding: 10px 6px 0; }
+
+/* Page hero side card (desktop only) */
+.page-hero-card { display:none; }
+@media (min-width: 1000px) {
+  .page-hero-inner { display:flex; align-items:center; justify-content:space-between; gap:48px; }
+  .page-hero-text { flex:1 1 auto; min-width:0; }
+  .page-hero-card { display:block; flex:0 0 320px; background:rgba(255,255,255,0.05); border:1px solid rgba(200,134,10,0.35); border-radius:16px; padding:28px; box-shadow:0 12px 40px rgba(0,0,0,0.35); }
+  .page-hero-card h3 { font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--amber); margin:0 0 16px; font-family:'Epilogue',sans-serif; }
+  .page-hero-card p { margin:0 0 14px; color:var(--text); font-size:15px; line-height:1.5; }
+  .page-hero-card strong { display:block; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); font-weight:600; }
+  .page-hero-card a.btn-primary { display:block; text-align:center; margin-top:18px; padding:14px 20px; font-size:14px; }
+}

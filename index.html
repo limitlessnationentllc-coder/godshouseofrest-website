@@ -2908,59 +2908,11 @@
     </p>
 
     <div class="reveal reveal-delay-3">
-      <div class="give-toggle" role="group" aria-label="Giving frequency">
-        <button class="give-toggle-btn" onclick="setFreq(this, 'once')" aria-pressed="false">One-Time</button>
-        <button class="give-toggle-btn active" onclick="setFreq(this, 'monthly')" aria-pressed="true">Monthly</button>
-        <button class="give-toggle-btn" onclick="setFreq(this, 'quarterly')" aria-pressed="false">Quarterly</button>
-      </div>
-
-      <div class="give-amounts" role="group" aria-label="Select giving amount">
-        <button class="amount-btn" onclick="setAmount(this, 25)" aria-pressed="false">$25</button>
-        <button class="amount-btn active" onclick="setAmount(this, 50)" aria-pressed="true">$50</button>
-        <button class="amount-btn" onclick="setAmount(this, 100)" aria-pressed="false">$100</button>
-        <button class="amount-btn" onclick="setAmount(this, 250)" aria-pressed="false">$250</button>
-      </div>
-
-      <div class="give-custom">
-        <span class="give-custom-prefix" aria-hidden="true">$</span>
-        <input type="number" id="customAmount" placeholder="Custom amount" aria-label="Custom giving amount in dollars" min="1">
-      </div>
-
-      <div class="give-fund">
-        <label for="giveSelect" class="sr-only">Select giving fund</label>
-        <select id="giveSelect" aria-label="Select fund to give to">
-          <option value="general">General Fund</option>
-          <option value="building">Building Fund</option>
-          <option value="youth">Youth Fund</option>
-          <option value="missions">Missions</option>
-          <option value="outreach">Community Outreach</option>
-        </select>
-      </div>
-
-      <button class="btn-primary" style="font-size:15px; padding:18px 48px; margin:0 auto; display:flex; align-items:center; gap:12px" aria-label="Give now - secure giving">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        Give Now — Safe &amp; Secure
-      </button>
-
-      <p style="font-size:12px; color:var(--text-muted); margin-top:16px">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; vertical-align:middle; margin-right:4px" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        256-bit SSL encrypted · Tax deductible · Cancel anytime
-      </p>
-
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; text-align:left">
-        <div style="background:rgba(255,255,255,0.04); border-radius:8px; padding:20px">
-          <div style="font-size:28px; font-weight:900; color:var(--gold); font-family:'Fraunces',serif"><span class="give-impact-num" data-target="50">$50</span></div>
-          <div style="font-size:13px; color:var(--text-muted); margin-top:4px">feeds 10 families through our community outreach</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.04); border-radius:8px; padding:20px">
-          <div style="font-size:28px; font-weight:900; color:var(--gold); font-family:'Fraunces',serif"><span class="give-impact-num" data-target="100">$100</span></div>
-          <div style="font-size:13px; color:var(--text-muted); margin-top:4px">provides youth resources for an entire month</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.04); border-radius:8px; padding:20px">
-          <div style="font-size:28px; font-weight:900; color:var(--gold); font-family:'Fraunces',serif"><span class="give-impact-num" data-target="250">$250</span></div>
-          <div style="font-size:13px; color:var(--text-muted); margin-top:4px">supports one full month of community outreach</div>
-        </div>
-      </div>
+      <a class="btn-primary" href="https://cash.app/$GodsHouseOfRest" target="_blank" rel="noopener" style="font-size:18px; padding:20px 56px; margin:0 auto; display:inline-flex; align-items:center; gap:12px">Give with Cash App</a>
+      <p style="font-size:14px; color:var(--text-muted); margin-top:16px">Giving through Cash App is quick and secure.</p>
+      <div style="margin:28px auto 0; background:#fff; border-radius:14px; padding:14px; display:inline-block"><img src="/godshouseofrest/ghorc-cash-app-qr.svg" width="180" height="180" alt="QR code to give to God's House of Rest Church on Cash App" loading="lazy"></div>
+      <p style="font-size:13px; color:var(--text-muted); margin-top:10px">Scan with your phone camera</p>
+      <p style="font-size:20px; font-weight:700; color:var(--gold); margin-top:6px">$Godshouseofrest</p>
     </div>
   </div>
 </section>
@@ -3276,26 +3228,6 @@
     document.getElementById('prayerConfirm').classList.add('show');
   });
 
-  // ─── GIVE AMOUNTS ───
-  function setAmount(btn, val) {
-    document.querySelectorAll('.amount-btn').forEach(b => {
-      b.classList.remove('active');
-      b.setAttribute('aria-pressed', 'false');
-    });
-    btn.classList.add('active');
-    btn.setAttribute('aria-pressed', 'true');
-    document.getElementById('customAmount').value = '';
-  }
-
-  function setFreq(btn, freq) {
-    document.querySelectorAll('.give-toggle-btn').forEach(b => {
-      b.classList.remove('active');
-      b.setAttribute('aria-pressed', 'false');
-    });
-    btn.classList.add('active');
-    btn.setAttribute('aria-pressed', 'true');
-  }
-
   // ─── LIGHTBOX ───
   const lightbox = document.getElementById('lightbox');
 
@@ -3324,15 +3256,6 @@
     }
   });
 
-  // ─── CUSTOM AMOUNT clears preset ───
-  document.getElementById('customAmount').addEventListener('input', function() {
-    if (this.value) {
-      document.querySelectorAll('.amount-btn').forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-pressed', 'false');
-      });
-    }
-  });
 
   // ─── EMBER PARTICLE SYSTEM ───
   (function() {
