@@ -1,22 +1,192 @@
 {
-  "events": [
-    {"slug":"youth-movie-night-2026","title":"Youth Movie Night: The Cat in the Hat","category":"youth","startDate":"2026-11-14T15:00:00-08:00","description":"CSL Ministry Youth Movie Night for elementary-age youth. Details are shared with registered youth only. Call (619) 931-9344 to register.","flyerImage":"/images/events/ghorc-youth-movie-night-cat-in-the-hat-2026.webp","flyerAlt":"Flyer for the Youth Movie Night showing The Cat in the Hat, Saturday November 14 at 3 PM, God's House of Rest Church CSL Ministry","locationVisible":false,"program":"youth"},
-    {"slug":"make-it-holy-2026","title":"Make It Holy 2026: Trunk-or-Treat","category":"youth","startDate":"2026-10-31T18:00:00-07:00","description":"Our 2nd annual trunk-or-treat in the church parking lot, hosted by our youth ministry. Kids, families, and neighbors were welcome.","flyerImage":"/images/events/ghorc-make-it-holy-2026-trunk-or-treat-flyer.webp","flyerAlt":"Flyer for Make It Holy 2026, a trunk-or-treat at God's House of Rest Church, Chula Vista, October 31 at 6 PM","locationVisible":true,"program":"youth"},
-    {"slug":"appreciation-service-2026","title":"Pastor and First Lady Appreciation Service","category":"worship","startDate":"2026-09-27T15:00:00-07:00","description":"A service of appreciation for Pastor R. Tyrone Robertson and First Lady Deborah Robertson.","flyerImage":"/images/events/ghorc-appreciation-service-pastor-robertson-first-lady-2026-09-27.webp","flyerAlt":"Flyer for the Appreciation Service honoring Pastor R. Tyrone Robertson and First Lady Deborah Robertson, September 27 at 3 PM","locationVisible":true,"program":"community"},
-    {"slug":"spiritual-voter-talk-2026","title":"Spiritual Voter Talk","category":"community","startDate":"2026-10-20T19:00:00-07:00","endDate":"2026-10-20T20:30:00-07:00","description":"An educational, nonpartisan conversation during Tuesday Bible study on faith and civic responsibility.","locationVisible":true,"program":"community"},
-    {"slug":"all-cancer-walk-2026","title":"All Cancer Walk","category":"community","startDate":"2026-10-24T08:00:00-07:00","endDate":"2026-10-24T12:00:00-07:00","description":"Registration at 8:00 AM, walk at 10:00 AM. Montgomery Waller Community Park, 3020 Coronado Ave, San Diego, CA 92154. Questions: call (619) 931-9344.","locationVisible":true,"locationName":"Montgomery Waller Community Park","street":"3020 Coronado Ave","city":"San Diego","zip":"92154","program":"community"},
-    {"slug":"annual-church-picnic-2026","title":"Annual Church Picnic","category":"community","startDate":"2026-08-15T12:00:00-07:00","endDate":"2026-08-15T16:00:00-07:00","description":"Our annual church picnic, 12:00 to 4:00 PM at the J Street Pier, Sandpiper area, Chula Vista, CA 91910.","locationVisible":true,"locationName":"J Street Pier, Sandpiper area","street":"J Street Pier","city":"Chula Vista","zip":"91910","program":"community"},
-    {"slug":"vbs-2026-open-house","title":"VBS Open House","category":"youth","startDate":"2026-06-27T18:30:00-07:00","description":"Open house celebrating Vacation Bible School 2026: Seed of Truth.","locationVisible":true,"program":"vbs"},
-    {"slug":"vbs-2026-seed-of-truth","title":"Vacation Bible School: Seed of Truth, Spy Academy","category":"youth","startDate":"2026-06-22T10:00:00-07:00","endDate":"2026-06-26T15:00:00-07:00","description":"Free Vacation Bible School for ages 4 to 13, Monday through Friday, 10:00 AM to 3:00 PM.","flyerImage":"/images/events/ghorc-vbs-2026-seed-of-truth-spy-academy-coming-soon.webp","flyerAlt":"Flyer for Vacation Bible School Seed of Truth Spy Academy at God's House of Rest Church, free for kids","locationVisible":true,"program":"vbs"},
-    {"slug":"resurrection-sunday-2026","title":"Resurrection Sunday","category":"worship","startDate":"2026-04-05T11:00:00-07:00","description":"Resurrection Sunday worship at 11:00 AM.","locationVisible":true,"program":"holy-week"},
-    {"slug":"palm-sunday-2026","title":"Palm Sunday","category":"worship","startDate":"2026-03-29T11:00:00-07:00","description":"Palm Sunday worship at 11:00 AM, the start of Holy Week.","locationVisible":true,"program":"holy-week"},
-    {"slug":"youth-sunday-2026","title":"Youth Sunday","category":"youth","startDate":"2026-03-22T11:00:00-07:00","description":"Youth Sunday with guest speaker Pastor Jeffrey R. Gary.","locationVisible":true,"program":"youth"},
-    {"slug":"jet-ski-day","title":"Jet Ski Day","needsDate":true},
-    {"slug":"womens-brunch-empower-for-purpose","title":"Women's Brunch: Empower for Purpose","needsDate":true},
-    {"slug":"womens-game-night","title":"Women's Game Night","needsDate":true},
-    {"slug":"youth-service-power-of-the-blood","title":"Youth Service: Power of the Blood (August)","needsDate":true},
-    {"slug":"youth-field-trip","title":"Youth Field Trip","needsDate":true},
-    {"slug":"money-wisdom","title":"Money Wisdom","needsDate":true},
-    {"slug":"soul-food-sunday","title":"Soul Food Sunday","needsDate":true}
-  ]
+ "events": [
+  {
+   "slug": "youth-movie-night-2026",
+   "title": "Youth Movie Night: The Cat in the Hat",
+   "category": "youth",
+   "startDate": "2026-11-14T15:00:00-08:00",
+   "description": "CSL Ministry Youth Movie Night for elementary-age youth. Details are shared with registered youth only. Call (619) 931-9344 to register.",
+   "flyerImage": "/images/events/ghorc-youth-movie-night-cat-in-the-hat-2026.webp",
+   "flyerAlt": "Flyer for the Youth Movie Night showing The Cat in the Hat, Saturday November 14 at 3 PM, God's House of Rest Church CSL Ministry",
+   "locationVisible": false,
+   "program": "youth"
+  },
+  {
+   "slug": "make-it-holy-2026",
+   "title": "Make It Holy 2026: Trunk-or-Treat",
+   "category": "youth",
+   "startDate": "2026-10-31T18:00:00-07:00",
+   "description": "Our 2nd annual trunk-or-treat in the church parking lot, hosted by our youth ministry. Kids, families, and neighbors were welcome.",
+   "flyerImage": "/images/events/ghorc-make-it-holy-2026-trunk-or-treat-flyer.webp",
+   "flyerAlt": "Flyer for Make It Holy 2026, a trunk-or-treat at God's House of Rest Church, Chula Vista, October 31 at 6 PM",
+   "locationVisible": true,
+   "program": "youth"
+  },
+  {
+   "slug": "appreciation-service-2026",
+   "title": "Pastor and First Lady Appreciation Service",
+   "category": "worship",
+   "startDate": "2026-09-27T15:00:00-07:00",
+   "description": "A service of appreciation for Pastor R. Tyrone Robertson and First Lady Deborah Robertson.",
+   "flyerImage": "/images/events/ghorc-appreciation-service-pastor-robertson-first-lady-2026-09-27.webp",
+   "flyerAlt": "Flyer for the Appreciation Service honoring Pastor R. Tyrone Robertson and First Lady Deborah Robertson, September 27 at 3 PM",
+   "locationVisible": true,
+   "program": "community"
+  },
+  {
+   "slug": "spiritual-voter-talk-2026",
+   "title": "Spiritual Voter Talk",
+   "category": "community",
+   "startDate": "2026-10-20T19:00:00-07:00",
+   "endDate": "2026-10-20T20:30:00-07:00",
+   "description": "An educational, nonpartisan conversation during Tuesday Bible study on faith and civic responsibility.",
+   "locationVisible": true,
+   "program": "community"
+  },
+  {
+   "slug": "all-cancer-walk-2026",
+   "title": "All Cancer Walk",
+   "category": "community",
+   "startDate": "2026-10-24T08:00:00-07:00",
+   "endDate": "2026-10-24T12:00:00-07:00",
+   "description": "Registration at 8:00 AM, walk at 10:00 AM, celebration at 12:00 noon. Registration fee $10, donations accepted. Montgomery Waller Community Park, 3020 Coronado Ave, San Diego, CA 92154. Questions: call (619) 931-9344.",
+   "locationVisible": true,
+   "locationName": "Montgomery Waller Community Park",
+   "street": "3020 Coronado Ave",
+   "city": "San Diego",
+   "zip": "92154",
+   "program": "community"
+  },
+  {
+   "slug": "annual-church-picnic-2026",
+   "title": "Annual Church Picnic",
+   "category": "community",
+   "startDate": "2026-08-15T12:00:00-07:00",
+   "endDate": "2026-08-15T16:00:00-07:00",
+   "description": "Our annual church picnic, 12:00 to 4:00 PM at the J Street Pier, Sandpiper area, Chula Vista, CA 91910.",
+   "locationVisible": true,
+   "locationName": "J Street Pier, Sandpiper area",
+   "street": "J Street Pier",
+   "city": "Chula Vista",
+   "zip": "91910",
+   "program": "community"
+  },
+  {
+   "slug": "vbs-2026-open-house",
+   "title": "VBS Open House",
+   "category": "youth",
+   "startDate": "2026-06-27T18:30:00-07:00",
+   "description": "Open house celebrating Vacation Bible School 2026: Seed of Truth.",
+   "locationVisible": true,
+   "program": "vbs"
+  },
+  {
+   "slug": "vbs-2026-seed-of-truth",
+   "title": "Vacation Bible School: Seed of Truth, Spy Academy",
+   "category": "youth",
+   "startDate": "2026-06-22T10:00:00-07:00",
+   "endDate": "2026-06-26T15:00:00-07:00",
+   "description": "Free Vacation Bible School for ages 4 to 13, Monday through Friday, 10:00 AM to 3:00 PM.",
+   "flyerImage": "/images/events/ghorc-vbs-2026-seed-of-truth-spy-academy-coming-soon.webp",
+   "flyerAlt": "Flyer for Vacation Bible School Seed of Truth Spy Academy at God's House of Rest Church, free for kids",
+   "locationVisible": true,
+   "program": "vbs"
+  },
+  {
+   "slug": "resurrection-sunday-2026",
+   "title": "Resurrection Sunday",
+   "category": "worship",
+   "startDate": "2026-04-05T11:00:00-07:00",
+   "description": "Resurrection Sunday worship at 11:00 AM.",
+   "locationVisible": true,
+   "program": "holy-week"
+  },
+  {
+   "slug": "palm-sunday-2026",
+   "title": "Palm Sunday",
+   "category": "worship",
+   "startDate": "2026-03-29T11:00:00-07:00",
+   "description": "Palm Sunday worship at 11:00 AM, the start of Holy Week.",
+   "locationVisible": true,
+   "program": "holy-week"
+  },
+  {
+   "slug": "youth-sunday-2026",
+   "title": "Youth Sunday",
+   "category": "youth",
+   "startDate": "2026-03-22T11:00:00-07:00",
+   "description": "Youth Sunday with guest speaker Pastor Jeffrey R. Gary.",
+   "locationVisible": true,
+   "program": "youth"
+  },
+  {
+   "slug": "womens-brunch-empower-for-purpose",
+   "title": "Women's Brunch: Empower for Purpose",
+   "needsDate": true
+  },
+  {
+   "slug": "jet-ski-day-2026",
+   "title": "Jet Ski Fellowship Day",
+   "category": "youth",
+   "startDate": "2026-07-11T11:00:00-07:00",
+   "endDate": "2026-07-11T13:00:00-07:00",
+   "description": "Teens and young adults hit the water at J Street, Chula Vista, for jet skiing, food, games, music, and a quick spiritual talk. Faith, friends, fun, freedom.",
+   "locationVisible": true,
+   "locationName": "J Street",
+   "street": "J Street",
+   "city": "Chula Vista",
+   "zip": "91910",
+   "program": "youth"
+  },
+  {
+   "slug": "family-game-night-2026",
+   "title": "Family Game Night Fundraiser",
+   "category": "community",
+   "startDate": "2026-04-18T17:00:00-07:00",
+   "endDate": "2026-04-18T20:00:00-07:00",
+   "description": "A fellowship night hosted by the Women's Department. $5 entry. Bingo, Phase 10, Sequence, Lyrically Correct, and more, with hot dogs, hot links, nachos, cookies, and drinks. Every game played supported our youth and church initiatives.",
+   "locationVisible": true,
+   "program": "womens-ministry"
+  },
+  {
+   "slug": "mo-money-wisdom-2026",
+   "title": "Mo' Money Wisdom",
+   "category": "youth",
+   "startDate": "2026-03-13T19:00:00-07:00",
+   "endDate": "2026-03-13T21:00:00-07:00",
+   "description": "Biblical money lessons and a Cashflow game for teenagers and young adults. Faith meets finances, with snacks, games, and prayer.",
+   "locationVisible": true,
+   "program": "youth"
+  },
+  {
+   "slug": "youth-field-trip-2026",
+   "title": "Youth Ministry Field Trip",
+   "category": "youth",
+   "startDate": "2026-03-07T09:30:00-08:00",
+   "endDate": "2026-03-07T15:30:00-08:00",
+   "description": "Our youth visited the Creation & Earth History Museum to explore scriptural and scientific evidence that supports the biblical account of creation. Drop-off was at the church.",
+   "locationVisible": true,
+   "locationName": "Creation & Earth History Museum",
+   "noAddress": true,
+   "program": "youth"
+  },
+  {
+   "slug": "soul-food-sunday-2026",
+   "title": "Soul Food Sunday",
+   "category": "community",
+   "startDate": "2026-03-08T12:00:00-07:00",
+   "description": "Southern-style plates, pre-ordered: fried catfish with 2 sides ($25) and fried chicken wings with 2 sides ($25). Add peach cobbler or banana pudding ($5 each). Every plate came with a dessert and soda.",
+   "locationVisible": true,
+   "program": "community"
+  },
+  {
+   "slug": "youth-service-power-of-the-blood-2026",
+   "title": "Youth Service: Power of the Blood",
+   "category": "youth",
+   "startDate": "2026-08-30T11:00:00-07:00",
+   "description": "Youth Sunday service with the theme Power of the Blood. Our young people shared their turn, story, and testimony: one blood, one victory, one power.",
+   "locationVisible": true,
+   "program": "youth"
+  }
+ ]
 }

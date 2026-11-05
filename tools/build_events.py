@@ -21,7 +21,7 @@ def fmt_time(e):
 def fmt_date(e): return start(e).astimezone(PT).strftime("%A, %B %-d, %Y")
 def where(e):
     if not e.get("locationVisible"): return "Details shared with registered families"
-    if e.get("locationName"): return f'{e["locationName"]}, {e["city"]}, CA'
+    if e.get("locationName"): return f'{e["locationName"]}, {e["city"]}, CA' if e.get("city") else e["locationName"]
     return "618 E Street Suite H, Chula Vista, CA 91910"
 def img_tag(e, cls="", lazy=True):
     p = e.get("flyerImage")
@@ -105,7 +105,7 @@ for e in E:
         h = re.sub(r'(twitter:image" content=")[^"]*', rf'\g<1>{BASE}{e["flyerImage"]}', h)
     h = re.sub(r"<h1>.*?</h1>", f"<h1>{esc(e['title'])}</h1>", h, count=1, flags=re.S)
     h = re.sub(r'<p class="page-hero-sub">.*?</p>', f'<p class="page-hero-sub">{fmt_date(e)}</p>', h, count=1, flags=re.S)
-    loc = {"@type": "Place", "name": e.get("locationName", "God's House of Rest Church"),
+    loc = {"@type": "Place", "name": e["locationName"]} if e.get("noAddress") else {"@type": "Place", "name": e.get("locationName", "God's House of Rest Church"),
            "address": {"@type": "PostalAddress", "streetAddress": e.get("street", "618 E Street Suite H"), "addressLocality": e.get("city", "Chula Vista"), "addressRegion": "CA", "postalCode": e.get("zip", "91910"), "addressCountry": "US"}} if e.get("locationVisible") else {"@type": "Place", "name": "God's House of Rest Church", "address": {"@type": "PostalAddress", "addressLocality": "Chula Vista", "addressRegion": "CA", "addressCountry": "US"}}
     ld = {"@context": "https://schema.org", "@type": "Event", "name": e["title"], "description": d,
           "startDate": e["startDate"], "endDate": end(e).isoformat() if e.get("endDate") else None,
