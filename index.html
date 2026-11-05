@@ -3681,7 +3681,7 @@
       const daysUntilSun = day === 0 ? 0 : 7 - day;
       const next = new Date(pt);
       next.setDate(pt.getDate() + daysUntilSun);
-      next.setHours(10, 0, 0, 0);
+      next.setHours(11, 0, 0, 0);
       if (pt >= next) { next.setDate(next.getDate() + 7); }
       return next;
     }
@@ -3697,8 +3697,8 @@
       const units  = document.getElementById('countdownUnits');
       const watchBtn = document.getElementById('watchLiveBtn');
 
-      // Live right now? (Sunday 10am–12pm PT)
-      const isLive = pt.getDay() === 0 && pt.getHours() >= 10 && pt.getHours() < 12;
+      // Live right now? (Sunday 11am–1pm PT)
+      const isLive = pt.getDay() === 0 && pt.getHours() >= 11 && pt.getHours() < 13;
       if (isLive) {
         dot && dot.classList.add('live');
         if (status) status.textContent = '🔴 Live Now — Join Worship';
